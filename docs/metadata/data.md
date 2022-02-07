@@ -30,9 +30,9 @@ data:
     qrels: https://trec.nist.gov/data/robust/qrels.robust2004.txt
     topics: https://trec.nist.gov/data/robust/04.testset.gz
     ir_datasets: https://ir-datasets.com/trec-robust04
-  - other:
-    - name: GloVe embeddings
-      source: https://nlp.stanford.edu/projects/glove/
-    - name: Indri's stopword list
-      source: https://sourceforge.net/projects/lemur/
+  other:
+  - name: GloVe embeddings
+    source: https://nlp.stanford.edu/projects/glove/
+  - name: Indri's stopword list
+    source: https://sourceforge.net/projects/lemur/
 ```
