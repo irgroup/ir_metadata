@@ -1,0 +1,34 @@
+site_name: ir_metadata
+site_url: https://irgroup.github.io/ir_metadata
+theme: 
+    name: material
+    favicon: 
+    icon:
+        repo: fontawesome/brands/github
+        logo: fontawesome/solid/hashtag
+    features:
+        - header.autohide
+        - navigation.top
+    palette:
+        primary: teal
+        accent: deep orange
+    font:
+        text: Roboto
+nav:
+    - Metadata Annotations of Open Runs: index.md
+    - 'Metadata schema': 
+        - 'Overview': metadata/overview.md
+        - 'Platform': metadata/platform.md
+        - 'Research Goal': metadata/research_goal.md
+        - 'Implementation': metadata/implementation.md
+        - 'Method': metadata/method.md
+        - 'Actor': metadata/actor.md
+        - 'Data': metadata/data.md
+    - 'Software support': software.md  
+    - Dataset: dataset.md
+    - Colab notebook: colab.md
+repo_url: https://github.com/irgroup/ir_metadata
+repo_name: ir_metadata
+edit_uri: https://github.com/irgroup/ir_metadata/tree/master/docs
+
+
