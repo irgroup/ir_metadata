@@ -4,17 +4,57 @@ The metadata information about the **Research goal** should include information 
 
 ## Checklist
 
-- `research goal` &rarr; `venue` &rarr; `name`
-- `research goal` &rarr; `venue` &rarr; `year`
-- `research goal` &rarr; `publication` &rarr; `dblp` 
-- `research goal` &rarr; `publication` &rarr; `doi` 
-- `research goal` &rarr; `publication` &rarr; `arxiv` 
-- `research goal` &rarr; `publication` &rarr; `url` 
-- `research goal` &rarr; `publication` &rarr; `abstract` 
-- `research goal` &rarr; `evaluation` &rarr; `reported_measures`
-- `research goal` &rarr; `evaluation` &rarr; `baseline`
-- `research goal` &rarr; `evaluation` &rarr; `significance test`&rarr; `name`
-- `research goal` &rarr; `evaluation` &rarr; `significance test` &rarr; `correction method`
+- `research goal` &rarr; `venue` &rarr; `name`  
+**Description:**  
+Name of the venue (e.g. journal or conference) at which is the study is published.  
+**Type:**  
+*Scalar*; usually a string of characters
+- `research goal` &rarr; `venue` &rarr; `year`  
+**Description:**  
+Year in which the study was published.  
+**Type:**  
+*Scalar*; usually an integer number
+- `research goal` &rarr; `publication` &rarr; `dblp`  
+**Description:**  
+URL of the publication in the [dblp - computer science bibliography](https://dblp.uni-trier.de/).  
+**Type:**  
+*Scalar*; usually a string of characters
+- `research goal` &rarr; `publication` &rarr; `doi`  
+**Description:**  
+DOI of the publication.  
+**Type:**  
+*Scalar*; usually a string of characters
+- `research goal` &rarr; `publication` &rarr; `arxiv`  
+**Description:**  
+URL to the [arXiv](https://dblp.uni-trier.de/) publication.  
+**Type:**  
+*Scalar*; usually a string of characters
+- `research goal` &rarr; `publication` &rarr; `url`  
+**Description:**  
+Custom URL where is the publication is hosted.    
+**Type:**  
+*Scalar*; usually a string of characters
+- `research goal` &rarr; `publication` &rarr; `abstract`  
+**Description:**  
+Abstract of the publication.    
+**Type:**  
+*Scalar*; usually a string of characters
+- `research goal` &rarr; `evaluation` &rarr; `reported_measures`  
+**Description:**  
+A list of measures that were evaluated. We propose to follow `trec_eval`'s naming convention of the measures.   
+**Type:**  
+*Sequence of scalars*; usually a listing of strings
+- `research goal` &rarr; `evaluation` &rarr; `baseline`  
+**Description:**  
+The run tag of the baseline that is used in the experiments. If the [Actor](../actor) is the original `experimenter`, the baseline should be adequate and state-of-the-art. If the Actor is a `reproducer` the baseline refers to the run that is reproduced.  
+**Type:**  
+*Sequence of scalars*; usually a listing of strings
+- `research goal` &rarr; `evaluation` &rarr; `significance test`  
+**Description:**  
+Significance tests that were used as part of the experimental evaluations. If required the corresponding correction method should be reported as well.    
+**Type:**  
+*Sequence of mappings*; a single mapping usually contains a scalar of the `name` and `correction method`
+
 
 ## Example
 

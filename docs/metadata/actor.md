@@ -4,15 +4,51 @@ The metadata information about the **Actor** should include all available public
 
 ## Checklist
 
-- `actor` &rarr; `name` 
-- `actor` &rarr; `orcid` 
-- `actor` &rarr; `team` 
-- `actor` &rarr; `fields` 
-- `actor` &rarr; `mail`
-- `actor` &rarr; `role` 
-- `actor` &rarr; `degree` 
-- `actor` &rarr; `github` 
-- `actor` &rarr; `twitter` 
+- `actor` &rarr; `name`  
+**Description:**  
+Name of the Actor.  
+**Type:**  
+*Scalar*; usually a string of characters
+- `actor` &rarr; `orcid`  
+**Description:**  
+[ORCID](https://orcid.org/) of the Actor.  
+**Type:**  
+*Scalar*; usually a string of characters
+- `actor` &rarr; `team`  
+**Description:**  
+Team name of which the Actor is part of.  
+**Type:**  
+*Scalar*; usually a string of characters
+- `actor` &rarr; `fields`  
+**Description:**  
+List of the Actor's research fields.  
+**Type:**  
+*Sequence of scalars*; usually a listing of strings
+- `actor` &rarr; `mail`  
+**Description:**  
+Mail address of the Actor.  
+**Type:**  
+*Scalar*; usually a string of characters
+- `actor` &rarr; `role`  
+**Description:**  
+Role of the Actor. Can be `experimenter` if the original experiment is conducted or `reproducer` if the experiment is reproduced.  
+**Type:**  
+*Scalar*; usually a string of characters
+- `actor` &rarr; `degree`  
+**Description:**  
+The academic degree of the Actor, e.g., `B.Sc.`, `M.Sc.`, or `Ph.D.`  
+**Type:**  
+*Scalar*; usually a string of characters
+- `actor` &rarr; `github`  
+**Description:**  
+[GitHub](https://www.github.com/) handle of the Actor.  
+**Type:**  
+*Scalar*; usually a string of characters
+- `actor` &rarr; `twitter`  
+**Description:**  
+[Twitter](https://www.twitter.com/) handle of the Actor.  
+**Type:**  
+*Scalar*; usually a string of characters
 
 ## Example
 

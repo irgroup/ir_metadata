@@ -4,10 +4,26 @@ The metadata information about the **Implementation** should include the URL of 
 
 ## Checklist
 
-- `implementation` &rarr; `executable` &rarr; `cmd`
-- `implementation` &rarr; `source` &rarr; `lang`
-- `implementation` &rarr; `source` &rarr; `repository`
-- `implementation` &rarr; `source` &rarr; `commit`
+- `implementation` &rarr; `executable` &rarr; `cmd`  
+**Description:**  
+The software command that was used to conduct the experiments, i.e., to make the run.  
+**Type:**  
+*Scalar*; usually a string of characters
+- `implementation` &rarr; `source` &rarr; `lang`  
+**Description:**    
+All programming languages that were used for the experiments.  
+**Type:**   
+*Sequence of scalars*; listing of strings 
+- `implementation` &rarr; `source` &rarr; `repository`  
+**Description:**  
+The URL of the corresponding software repository.  
+**Type:**  
+*Scalar*; usually a string of characters
+- `implementation` &rarr; `source` &rarr; `commit`  
+**Description:**  
+The commit at which the repository was used for the experiments.   
+**Type:**  
+*Scalar*; usually a string of characters
 
 ## Example
 

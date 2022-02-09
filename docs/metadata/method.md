@@ -4,17 +4,43 @@ The metadata information about the **Method** should include if the run is autom
 
 ## Checklist
 
-- `method` &rarr; `automatic`
-- `method` &rarr; `score ties`
-- `method` &rarr; `indexing` &rarr; `tokenizer`
-- `method` &rarr; `indexing` &rarr; `stemmer`
-- `method` &rarr; `indexing` &rarr; `stopwords`
-- `method` &rarr; `retrieval` &rarr; `name`
-- `method` &rarr; `retrieval` &rarr; `method`
-- `method` &rarr; `retrieval` &rarr; `params`
-- `method` &rarr; `retrieval` &rarr; `reranks`
-- `method` &rarr; `retrieval` &rarr; `weight`
-- `method` &rarr; `retrieval` &rarr; `interpolates`
+- `method` &rarr; `automatic`  
+**Description:**  
+Boolean value indicating if it is a automatic (`true`) or manual (`false`) run.   
+**Type:**  
+*Boolean*; `true` if automatic, `false` if manual
+- `method` &rarr; `score ties`  
+**Description:**  
+Name of the method used to break score ties in the ranking.  
+**Type:**  
+*Scalar*; usually a string of characters
+- `method` &rarr; `indexing` &rarr; `tokenizer`  
+**Description:**  
+Name of the tokenizer.   
+**Type:**  
+*Scalar*; usually a string of characters
+- `method` &rarr; `indexing` &rarr; `stemmer`  
+**Description:**  
+Name of the stemmer.  
+**Type:**  
+*Scalar*; usually a string of characters
+- `method` &rarr; `indexing` &rarr; `stopwords`  
+**Description:**  
+Name of the stopword list.  
+**Type:**  
+*Scalar*; usually a string of characters
+- `method` &rarr; `retrieval`  
+**Description:**  
+Each mapping represents one component of a ranking pipeline, i.e., it is also possible to report multi-stage ranking pipelines by referring to previous ranking stages. The following scalars should be reported if required:  
+`method` &rarr; `retrieval` &rarr; `name`: Name of the ranking stage component.  
+`method` &rarr; `retrieval` &rarr; `method`: Name of the actual retrieval method.  
+`method` &rarr; `retrieval` &rarr; `params`: Parameters of the retrieval method.  
+`method` &rarr; `retrieval` &rarr; `reranks`: Name of the component whose output will be reranked.  
+`method` &rarr; `retrieval` &rarr; `interpolates`: List of components whose output is interpolated.  
+`method` &rarr; `retrieval` &rarr; `weight`:  Interpolation weight.   
+**Type:**  
+*Sequence of mappings*; one mapping represents one component in a multi-stage ranking pipeline
+
 
 ## Example
 

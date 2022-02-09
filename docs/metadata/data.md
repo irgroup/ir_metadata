@@ -4,15 +4,32 @@ The metadata information about the **Data** should include the test collection, 
 
 ## Checklist
 
-- `data` &rarr; `test collection` &rarr; `name`
-- `data` &rarr; `test collection` &rarr; `source`
-- `data` &rarr; `test collection` &rarr; `qrels`
-- `data` &rarr; `test collection` &rarr; `topics`
-- `data` &rarr; `test collection` &rarr; `ir_datasets`
-- `data` &rarr; `training data` &rarr; `name`
-- `data` &rarr; `training data` &rarr; `source`
-- `data` &rarr; `other` &rarr; `name`
-- `data` &rarr; `other` &rarr; `source`
+- `data` &rarr; `test collection`  
+**Description:**  
+A test collection includes but is not limited to the following components:  
+`data` &rarr; `test collection` &rarr; `name`: Name of the test collection.   
+`data` &rarr; `test collection` &rarr; `source`: Official source of the collection.      
+`data` &rarr; `test collection` &rarr; `qrels`: Source of the qrels.    
+`data` &rarr; `test collection` &rarr; `topics`:  Source of the topic file.  
+`data` &rarr; `test collection` &rarr; `ir_datasets`: Identifier in [`ir_datasets`](https://ir-datasets.com/).  
+**Type:**  
+*Collection of scalars*
+
+- `data` &rarr; `training data`  
+**Description:**  
+List of different training data sources that are used in the experiments.   
+`data` &rarr; `training data` &rarr; `name`  
+`data` &rarr; `training data` &rarr; `source`  
+**Type:**  
+*Sequence of mappings*; a mapping usually has a `name` and a `source`
+
+- `data` &rarr; `other`  
+**Description:**  
+List of other data sources that are used in the experiments, for instance, external stopword lists, thesauri, or word embeddings.    
+`data` &rarr; `other` &rarr; `name`  
+`data` &rarr; `other` &rarr; `source`  
+**Type:**  
+*Sequence of mappings*; a mapping usually has a `name` and a `source`
 
 ## Example
 

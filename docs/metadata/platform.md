@@ -4,18 +4,66 @@ The metadata information about the **Platform** should include the underlying ha
 
 ## Checklist
 
-- `platform` &rarr; `hardware` &rarr; `cpu` &rarr; `model`
-- `platform` &rarr; `hardware` &rarr; `cpu` &rarr; `architecture` 
-- `platform` &rarr; `hardware` &rarr; `cpu` &rarr; `operation mode`
-- `platform` &rarr; `hardware` &rarr; `cpu` &rarr; `number of cores`
-- `platform` &rarr; `hardware` &rarr; `gpu` &rarr; `architecture`
-- `platform` &rarr; `hardware` &rarr; `gpu` &rarr; `number of cores`
-- `platform` &rarr; `hardware` &rarr; `gpu` &rarr; `ram`
-- `platform` &rarr; `hardware` &rarr; `ram` 
-- `platform` &rarr; `operating system` &rarr; `kernel` 
-- `platform` &rarr; `operating system` &rarr; `distribution` 
-- `platform` &rarr; `software` &rarr; `libraries` 
-- `platform` &rarr; `software` &rarr; `retrieval toolkit` 
+- `platform` &rarr; `hardware` &rarr; `cpu` &rarr; `model`  
+**Description:**  
+Name of the CPU model.    
+**Type:**  
+*Scalar*; usually a string of characters
+- `platform` &rarr; `hardware` &rarr; `cpu` &rarr; `architecture`  
+**Description:**  
+Identifier of the CPU architecture.  
+**Type:**  
+*Scalar*; usually a string of characters
+- `platform` &rarr; `hardware` &rarr; `cpu` &rarr; `operation mode`  
+**Description:**  
+Operation mode of the CPU.  
+**Type:**  
+*Scalar*; usually a string of characters
+- `platform` &rarr; `hardware` &rarr; `cpu` &rarr; `number of cores`  
+**Description:**  
+Number of CPU cores.  
+**Type:**  
+*Scalar*; usually an integer number
+- `platform` &rarr; `hardware` &rarr; `gpu` &rarr; `architecture`  
+**Description:**  
+Name of the GPU architecture.  
+**Type:**  
+*Scalar*; usually a string of characters
+- `platform` &rarr; `hardware` &rarr; `gpu` &rarr; `number of cores`  
+**Description:**  
+Number of GPU cores.  
+**Type:**  
+*Scalar*; usually an integer number
+- `platform` &rarr; `hardware` &rarr; `gpu` &rarr; `ram`  
+**Description:**  
+Amount of available RAM of the GPU; string with numbers followed by GB.  
+**Type:**  
+*Scalar*; usually a string of characters
+- `platform` &rarr; `hardware` &rarr; `ram`   
+**Description:**  
+Amount of available RAM; string with numbers followed by GB.  
+**Type:**  
+*Scalar*; usually a string of characters
+- `platform` &rarr; `operating system` &rarr; `kernel`  
+**Description:**  
+The kernel version of the operating system.  
+**Type:**  
+*Scalar*; usually a string of characters
+- `platform` &rarr; `operating system` &rarr; `distribution`   
+**Description:**  
+The name of the operating system's distribution.   
+**Type:**  
+*Scalar*; usually a string of characters
+- `platform` &rarr; `software` &rarr; `libraries`  
+**Description:**  
+Names and versions of the software libraries and packages underlying the experiment's Implementation.   
+**Type:**  
+*Sequence of scalars* for each programming language; string representing the name of the software library and version if available
+- `platform` &rarr; `software` &rarr; `retrieval toolkit`  
+**Description:**  
+Names and versions of the retrieval toolkits underlying the experiment's [Implementation](../implementation).  
+**Type:**  
+*Sequence of scalars*; string representing the name of the retrieval toolkit and version if available
 
 ## Example
 
