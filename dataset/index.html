@@ -438,7 +438,7 @@
 
 <h1 id="annotated-dataset">Annotated dataset</h1>
 <p><a href=""><img alt="DOI" src="https://zenodo.org/badge/DOI/10.1234/zenodo.1234567.svg" /></a></p>
-<p>We have curated a dataset of annotated run files resulting from different experiments that share the same retrieval method on a more abstract level. All of these runs are based on <em>cross-collection relevance feedback</em> for which relevance labels and the corresponding documents from a <em>source collection</em> are used as training data to train a relevance classifier that ranks documents of a <em>target collection</em>. While some of the runs were available from the TREC run archive, others were reimplemented by us. All of the runs are annotated in accordance with the outlined metadata schema. The dataset is hosted in an external <a href="">Zenodo archive</a>. Some of the runs are used for the demonstration on Colab.</p>
+<p>We have curated a dataset of annotated run files resulting from different experiments that share the same retrieval method on a more abstract level. All of these runs are based on <em>cross-collection relevance feedback</em> for which relevance labels and the corresponding documents from one or more <em>source collections</em> are used as training data to train a relevance classifier that ranks documents of a <em>target collection</em>. While some of the runs were available from the TREC run archive, others were reimplemented by us. All of the runs are annotated in accordance with the outlined metadata schema. The dataset is hosted in an external <a href="">Zenodo archive</a>. Some of the runs are used for the demonstration on Colab.</p>
 <p>The run dataset is compiled from the following reproduced experiments:</p>
 <ul>
 <li>
@@ -460,6 +460,10 @@
 <p>Breuer et al. @ CLEF 2021 <a href="https://link.springer.com/chapter/10.1007/978-3-030-85251-1_5">Paper</a> | <a href="https://zenodo.org/record/4105885">Runs</a></p>
 </li>
 </ul>
+<p>The figure below illustrates the principle idea behind cross-collection relevance feedback.</p>
+<p align="center">
+  <img src="../assets/images/ccrf.svg"  style="width:50%;"/>
+</p>
 
               
             </article>

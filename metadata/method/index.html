@@ -499,10 +499,11 @@
 
 
 <h1 id="method">Method</h1>
-<p>The metadata information about the <strong>Method</strong> should include if the run is automatic or manual, i.e., derived with our without a human-in-the-loop approach, and information regarding the indexing and retrieval. While the indexing is usually composed of several processing steps including tokenization, stemming, and stopword removal, the retrieval method assign scores between a query and a document. Modern retrieval pipelines are often realized in the form of a multi-stage ranking that is supported by our metadata schema as well. If an additional ranking method reranks the output of a previous retrieval method, it can be reported by the <code>reranks</code> entry that refers to the name of the previous method. Likewise, it is possible to report interpolated scores.</p>
+<p>The metadata information about the <strong>Method</strong> should include if the run is automatic or manual, i.e., derived with our without a human-in-the-loop approach, and information regarding the indexing and retrieval. While the indexing is usually composed of several processing steps including tokenization, stemming, and stopword removal, the retrieval method assigns scores between a query and a document. Modern retrieval pipelines are often realized in the form of a multi-stage ranking that is supported by our metadata schema as well. If an additional ranking method reranks the output of a previous retrieval method, it can be reported by the <code>reranks</code> entry that refers to the name of the previous method. Likewise, it is possible to report interpolated scores.</p>
 <h2 id="checklist">Checklist</h2>
 <ul>
 <li><code>method</code> &rarr; <code>automatic</code></li>
+<li><code>method</code> &rarr; <code>score ties</code></li>
 <li><code>method</code> &rarr; <code>indexing</code> &rarr; <code>tokenizer</code></li>
 <li><code>method</code> &rarr; <code>indexing</code> &rarr; <code>stemmer</code></li>
 <li><code>method</code> &rarr; <code>indexing</code> &rarr; <code>stopwords</code></li>
