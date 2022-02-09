@@ -502,17 +502,56 @@
 <p>The metadata information about the <strong>Research goal</strong> should include information about the venue for which the study was made, the corresponding publications, as well as some information about the evaluation. If the <a href="../actor">Actor</a> is reported as <code>reproducer</code>, the <code>baseline</code> refers to the tag of the original run that is reimplemented, otherwise, it should be a strong and reasonable baseline if the <a href="../actor">Actor</a> is the original <code>experimenter</code>.</p>
 <h2 id="checklist">Checklist</h2>
 <ul>
-<li><code>research goal</code> &rarr; <code>venue</code> &rarr; <code>name</code></li>
-<li><code>research goal</code> &rarr; <code>venue</code> &rarr; <code>year</code></li>
-<li><code>research goal</code> &rarr; <code>publication</code> &rarr; <code>dblp</code> </li>
-<li><code>research goal</code> &rarr; <code>publication</code> &rarr; <code>doi</code> </li>
-<li><code>research goal</code> &rarr; <code>publication</code> &rarr; <code>arxiv</code> </li>
-<li><code>research goal</code> &rarr; <code>publication</code> &rarr; <code>url</code> </li>
-<li><code>research goal</code> &rarr; <code>publication</code> &rarr; <code>abstract</code> </li>
-<li><code>research goal</code> &rarr; <code>evaluation</code> &rarr; <code>reported_measures</code></li>
-<li><code>research goal</code> &rarr; <code>evaluation</code> &rarr; <code>baseline</code></li>
-<li><code>research goal</code> &rarr; <code>evaluation</code> &rarr; <code>significance test</code>&rarr; <code>name</code></li>
-<li><code>research goal</code> &rarr; <code>evaluation</code> &rarr; <code>significance test</code> &rarr; <code>correction method</code></li>
+<li><code>research goal</code> &rarr; <code>venue</code> &rarr; <code>name</code><br />
+<strong>Description:</strong><br />
+Name of the venue (e.g. journal or conference) at which is the study is published.<br />
+<strong>Type:</strong><br />
+<em>Scalar</em>; usually a string of characters</li>
+<li><code>research goal</code> &rarr; <code>venue</code> &rarr; <code>year</code><br />
+<strong>Description:</strong><br />
+Year in which the study was published.<br />
+<strong>Type:</strong><br />
+<em>Scalar</em>; usually an integer number</li>
+<li><code>research goal</code> &rarr; <code>publication</code> &rarr; <code>dblp</code><br />
+<strong>Description:</strong><br />
+URL of the publication in the <a href="https://dblp.uni-trier.de/">dblp - computer science bibliography</a>.<br />
+<strong>Type:</strong><br />
+<em>Scalar</em>; usually a string of characters</li>
+<li><code>research goal</code> &rarr; <code>publication</code> &rarr; <code>doi</code><br />
+<strong>Description:</strong><br />
+DOI of the publication.<br />
+<strong>Type:</strong><br />
+<em>Scalar</em>; usually a string of characters</li>
+<li><code>research goal</code> &rarr; <code>publication</code> &rarr; <code>arxiv</code><br />
+<strong>Description:</strong><br />
+URL to the <a href="https://dblp.uni-trier.de/">arXiv</a> publication.<br />
+<strong>Type:</strong><br />
+<em>Scalar</em>; usually a string of characters</li>
+<li><code>research goal</code> &rarr; <code>publication</code> &rarr; <code>url</code><br />
+<strong>Description:</strong><br />
+Custom URL where is the publication is hosted.  <br />
+<strong>Type:</strong><br />
+<em>Scalar</em>; usually a string of characters</li>
+<li><code>research goal</code> &rarr; <code>publication</code> &rarr; <code>abstract</code><br />
+<strong>Description:</strong><br />
+Abstract of the publication.  <br />
+<strong>Type:</strong><br />
+<em>Scalar</em>; usually a string of characters</li>
+<li><code>research goal</code> &rarr; <code>evaluation</code> &rarr; <code>reported_measures</code><br />
+<strong>Description:</strong><br />
+A list of measures that were evaluated. We propose to follow <code>trec_eval</code>'s naming convention of the measures. <br />
+<strong>Type:</strong><br />
+<em>Sequence of scalars</em>; usually a listing of strings</li>
+<li><code>research goal</code> &rarr; <code>evaluation</code> &rarr; <code>baseline</code><br />
+<strong>Description:</strong><br />
+The run tag of the baseline that is used in the experiments. If the <a href="../actor">Actor</a> is the original <code>experimenter</code>, the baseline should be adequate and state-of-the-art. If the Actor is a <code>reproducer</code> the baseline refers to the run that is reproduced.<br />
+<strong>Type:</strong><br />
+<em>Sequence of scalars</em>; usually a listing of strings</li>
+<li><code>research goal</code> &rarr; <code>evaluation</code> &rarr; <code>significance test</code><br />
+<strong>Description:</strong><br />
+Significance tests that were used as part of the experimental evaluations. If required the corresponding correction method should be reported as well.  <br />
+<strong>Type:</strong><br />
+<em>Sequence of mappings</em>; a single mapping usually contains a scalar of the <code>name</code> and <code>correction method</code></li>
 </ul>
 <h2 id="example">Example</h2>
 <pre><code class="language-YAML">research goal:

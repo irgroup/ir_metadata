@@ -502,18 +502,66 @@
 <p>The metadata information about the <strong>Platform</strong> should include the underlying hardware, the operating system, and the used software libraries. <code>software</code> covers every package or library that is used for the <a href="../implementation">Implementation</a>. If a retrieval toolkit is used, it should be reported explicitly.</p>
 <h2 id="checklist">Checklist</h2>
 <ul>
-<li><code>platform</code> &rarr; <code>hardware</code> &rarr; <code>cpu</code> &rarr; <code>model</code></li>
-<li><code>platform</code> &rarr; <code>hardware</code> &rarr; <code>cpu</code> &rarr; <code>architecture</code> </li>
-<li><code>platform</code> &rarr; <code>hardware</code> &rarr; <code>cpu</code> &rarr; <code>operation mode</code></li>
-<li><code>platform</code> &rarr; <code>hardware</code> &rarr; <code>cpu</code> &rarr; <code>number of cores</code></li>
-<li><code>platform</code> &rarr; <code>hardware</code> &rarr; <code>gpu</code> &rarr; <code>architecture</code></li>
-<li><code>platform</code> &rarr; <code>hardware</code> &rarr; <code>gpu</code> &rarr; <code>number of cores</code></li>
-<li><code>platform</code> &rarr; <code>hardware</code> &rarr; <code>gpu</code> &rarr; <code>ram</code></li>
-<li><code>platform</code> &rarr; <code>hardware</code> &rarr; <code>ram</code> </li>
-<li><code>platform</code> &rarr; <code>operating system</code> &rarr; <code>kernel</code> </li>
-<li><code>platform</code> &rarr; <code>operating system</code> &rarr; <code>distribution</code> </li>
-<li><code>platform</code> &rarr; <code>software</code> &rarr; <code>libraries</code> </li>
-<li><code>platform</code> &rarr; <code>software</code> &rarr; <code>retrieval toolkit</code> </li>
+<li><code>platform</code> &rarr; <code>hardware</code> &rarr; <code>cpu</code> &rarr; <code>model</code><br />
+<strong>Description:</strong><br />
+Name of the CPU model.  <br />
+<strong>Type:</strong><br />
+<em>Scalar</em>; usually a string of characters</li>
+<li><code>platform</code> &rarr; <code>hardware</code> &rarr; <code>cpu</code> &rarr; <code>architecture</code><br />
+<strong>Description:</strong><br />
+Identifier of the CPU architecture.<br />
+<strong>Type:</strong><br />
+<em>Scalar</em>; usually a string of characters</li>
+<li><code>platform</code> &rarr; <code>hardware</code> &rarr; <code>cpu</code> &rarr; <code>operation mode</code><br />
+<strong>Description:</strong><br />
+Operation mode of the CPU.<br />
+<strong>Type:</strong><br />
+<em>Scalar</em>; usually a string of characters</li>
+<li><code>platform</code> &rarr; <code>hardware</code> &rarr; <code>cpu</code> &rarr; <code>number of cores</code><br />
+<strong>Description:</strong><br />
+Number of CPU cores.<br />
+<strong>Type:</strong><br />
+<em>Scalar</em>; usually an integer number</li>
+<li><code>platform</code> &rarr; <code>hardware</code> &rarr; <code>gpu</code> &rarr; <code>architecture</code><br />
+<strong>Description:</strong><br />
+Name of the GPU architecture.<br />
+<strong>Type:</strong><br />
+<em>Scalar</em>; usually a string of characters</li>
+<li><code>platform</code> &rarr; <code>hardware</code> &rarr; <code>gpu</code> &rarr; <code>number of cores</code><br />
+<strong>Description:</strong><br />
+Number of GPU cores.<br />
+<strong>Type:</strong><br />
+<em>Scalar</em>; usually an integer number</li>
+<li><code>platform</code> &rarr; <code>hardware</code> &rarr; <code>gpu</code> &rarr; <code>ram</code><br />
+<strong>Description:</strong><br />
+Amount of available RAM of the GPU; string with numbers followed by GB.<br />
+<strong>Type:</strong><br />
+<em>Scalar</em>; usually a string of characters</li>
+<li><code>platform</code> &rarr; <code>hardware</code> &rarr; <code>ram</code> <br />
+<strong>Description:</strong><br />
+Amount of available RAM; string with numbers followed by GB.<br />
+<strong>Type:</strong><br />
+<em>Scalar</em>; usually a string of characters</li>
+<li><code>platform</code> &rarr; <code>operating system</code> &rarr; <code>kernel</code><br />
+<strong>Description:</strong><br />
+The kernel version of the operating system.<br />
+<strong>Type:</strong><br />
+<em>Scalar</em>; usually a string of characters</li>
+<li><code>platform</code> &rarr; <code>operating system</code> &rarr; <code>distribution</code> <br />
+<strong>Description:</strong><br />
+The name of the operating system's distribution. <br />
+<strong>Type:</strong><br />
+<em>Scalar</em>; usually a string of characters</li>
+<li><code>platform</code> &rarr; <code>software</code> &rarr; <code>libraries</code><br />
+<strong>Description:</strong><br />
+Names and versions of the software libraries and packages underlying the experiment's Implementation. <br />
+<strong>Type:</strong><br />
+<em>Sequence of scalars</em> for each programming language; string representing the name of the software library and version if available</li>
+<li><code>platform</code> &rarr; <code>software</code> &rarr; <code>retrieval toolkit</code><br />
+<strong>Description:</strong><br />
+Names and versions of the retrieval toolkits underlying the experiment's <a href="../implementation">Implementation</a>.<br />
+<strong>Type:</strong><br />
+<em>Sequence of scalars</em>; string representing the name of the retrieval toolkit and version if available</li>
 </ul>
 <h2 id="example">Example</h2>
 <pre><code class="language-YAML">platform:

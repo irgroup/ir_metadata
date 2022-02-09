@@ -502,15 +502,36 @@
 <p>The metadata information about the <strong>Data</strong> should include the test collection, training data and others. For the test collection, the data source as well as the location of the qrels and topics files have to be reported. If available, the identifier that is chosen by the data catalog <a href="https://ir-datasets.com/"><code>ir_datasets</code></a> should be reported as well. The example below uses another test collection as training data, but generally, this entry should be reported as a list, especially if more than one data source is used in the experiments. The third subcomponent <code>other</code> covers miscellaneous information related to the data, for instance, about word embeddings or stopwords.</p>
 <h2 id="checklist">Checklist</h2>
 <ul>
-<li><code>data</code> &rarr; <code>test collection</code> &rarr; <code>name</code></li>
-<li><code>data</code> &rarr; <code>test collection</code> &rarr; <code>source</code></li>
-<li><code>data</code> &rarr; <code>test collection</code> &rarr; <code>qrels</code></li>
-<li><code>data</code> &rarr; <code>test collection</code> &rarr; <code>topics</code></li>
-<li><code>data</code> &rarr; <code>test collection</code> &rarr; <code>ir_datasets</code></li>
-<li><code>data</code> &rarr; <code>training data</code> &rarr; <code>name</code></li>
-<li><code>data</code> &rarr; <code>training data</code> &rarr; <code>source</code></li>
-<li><code>data</code> &rarr; <code>other</code> &rarr; <code>name</code></li>
-<li><code>data</code> &rarr; <code>other</code> &rarr; <code>source</code></li>
+<li>
+<p><code>data</code> &rarr; <code>test collection</code><br />
+<strong>Description:</strong><br />
+A test collection includes but is not limited to the following components:<br />
+<code>data</code> &rarr; <code>test collection</code> &rarr; <code>name</code>: Name of the test collection. <br />
+<code>data</code> &rarr; <code>test collection</code> &rarr; <code>source</code>: Official source of the collection.    <br />
+<code>data</code> &rarr; <code>test collection</code> &rarr; <code>qrels</code>: Source of the qrels.  <br />
+<code>data</code> &rarr; <code>test collection</code> &rarr; <code>topics</code>:  Source of the topic file.<br />
+<code>data</code> &rarr; <code>test collection</code> &rarr; <code>ir_datasets</code>: Identifier in <a href="https://ir-datasets.com/"><code>ir_datasets</code></a>.<br />
+<strong>Type:</strong><br />
+<em>Collection of scalars</em></p>
+</li>
+<li>
+<p><code>data</code> &rarr; <code>training data</code><br />
+<strong>Description:</strong><br />
+List of different training data sources that are used in the experiments. <br />
+<code>data</code> &rarr; <code>training data</code> &rarr; <code>name</code><br />
+<code>data</code> &rarr; <code>training data</code> &rarr; <code>source</code><br />
+<strong>Type:</strong><br />
+<em>Sequence of mappings</em>; a mapping usually has a <code>name</code> and a <code>source</code></p>
+</li>
+<li>
+<p><code>data</code> &rarr; <code>other</code><br />
+<strong>Description:</strong><br />
+List of other data sources that are used in the experiments, for instance, external stopword lists, thesauri, or word embeddings.  <br />
+<code>data</code> &rarr; <code>other</code> &rarr; <code>name</code><br />
+<code>data</code> &rarr; <code>other</code> &rarr; <code>source</code><br />
+<strong>Type:</strong><br />
+<em>Sequence of mappings</em>; a mapping usually has a <code>name</code> and a <code>source</code></p>
+</li>
 </ul>
 <h2 id="example">Example</h2>
 <pre><code class="language-YAML">data:

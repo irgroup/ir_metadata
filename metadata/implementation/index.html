@@ -502,10 +502,26 @@
 <p>The metadata information about the <strong>Implementation</strong> should include the URL of the open-source repository if available. If so, also the commit at which the code of the repository was used should be made explicit. If the experiments are run from the command line, the corresponding commands including all the arguments and parameters should be added.</p>
 <h2 id="checklist">Checklist</h2>
 <ul>
-<li><code>implementation</code> &rarr; <code>executable</code> &rarr; <code>cmd</code></li>
-<li><code>implementation</code> &rarr; <code>source</code> &rarr; <code>lang</code></li>
-<li><code>implementation</code> &rarr; <code>source</code> &rarr; <code>repository</code></li>
-<li><code>implementation</code> &rarr; <code>source</code> &rarr; <code>commit</code></li>
+<li><code>implementation</code> &rarr; <code>executable</code> &rarr; <code>cmd</code><br />
+<strong>Description:</strong><br />
+The software command that was used to conduct the experiments, i.e., to make the run.<br />
+<strong>Type:</strong><br />
+<em>Scalar</em>; usually a string of characters</li>
+<li><code>implementation</code> &rarr; <code>source</code> &rarr; <code>lang</code><br />
+<strong>Description:</strong>  <br />
+All programming languages that were used for the experiments.<br />
+<strong>Type:</strong> <br />
+<em>Sequence of scalars</em>; listing of strings </li>
+<li><code>implementation</code> &rarr; <code>source</code> &rarr; <code>repository</code><br />
+<strong>Description:</strong><br />
+The URL of the corresponding software repository.<br />
+<strong>Type:</strong><br />
+<em>Scalar</em>; usually a string of characters</li>
+<li><code>implementation</code> &rarr; <code>source</code> &rarr; <code>commit</code><br />
+<strong>Description:</strong><br />
+The commit at which the repository was used for the experiments. <br />
+<strong>Type:</strong><br />
+<em>Scalar</em>; usually a string of characters</li>
 </ul>
 <h2 id="example">Example</h2>
 <pre><code class="language-YAML">implementation:

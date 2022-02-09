@@ -502,17 +502,42 @@
 <p>The metadata information about the <strong>Method</strong> should include if the run is automatic or manual, i.e., derived with our without a human-in-the-loop approach, and information regarding the indexing and retrieval. While the indexing is usually composed of several processing steps including tokenization, stemming, and stopword removal, the retrieval method assigns scores between a query and a document. Modern retrieval pipelines are often realized in the form of a multi-stage ranking that is supported by our metadata schema as well. If an additional ranking method reranks the output of a previous retrieval method, it can be reported by the <code>reranks</code> entry that refers to the name of the previous method. Likewise, it is possible to report interpolated scores.</p>
 <h2 id="checklist">Checklist</h2>
 <ul>
-<li><code>method</code> &rarr; <code>automatic</code></li>
-<li><code>method</code> &rarr; <code>score ties</code></li>
-<li><code>method</code> &rarr; <code>indexing</code> &rarr; <code>tokenizer</code></li>
-<li><code>method</code> &rarr; <code>indexing</code> &rarr; <code>stemmer</code></li>
-<li><code>method</code> &rarr; <code>indexing</code> &rarr; <code>stopwords</code></li>
-<li><code>method</code> &rarr; <code>retrieval</code> &rarr; <code>name</code></li>
-<li><code>method</code> &rarr; <code>retrieval</code> &rarr; <code>method</code></li>
-<li><code>method</code> &rarr; <code>retrieval</code> &rarr; <code>params</code></li>
-<li><code>method</code> &rarr; <code>retrieval</code> &rarr; <code>reranks</code></li>
-<li><code>method</code> &rarr; <code>retrieval</code> &rarr; <code>weight</code></li>
-<li><code>method</code> &rarr; <code>retrieval</code> &rarr; <code>interpolates</code></li>
+<li><code>method</code> &rarr; <code>automatic</code><br />
+<strong>Description:</strong><br />
+Boolean value indicating if it is a automatic (<code>true</code>) or manual (<code>false</code>) run. <br />
+<strong>Type:</strong><br />
+<em>Boolean</em>; <code>true</code> if automatic, <code>false</code> if manual</li>
+<li><code>method</code> &rarr; <code>score ties</code><br />
+<strong>Description:</strong><br />
+Name of the method used to break score ties in the ranking.<br />
+<strong>Type:</strong><br />
+<em>Scalar</em>; usually a string of characters</li>
+<li><code>method</code> &rarr; <code>indexing</code> &rarr; <code>tokenizer</code><br />
+<strong>Description:</strong><br />
+Name of the tokenizer. <br />
+<strong>Type:</strong><br />
+<em>Scalar</em>; usually a string of characters</li>
+<li><code>method</code> &rarr; <code>indexing</code> &rarr; <code>stemmer</code><br />
+<strong>Description:</strong><br />
+Name of the stemmer.<br />
+<strong>Type:</strong><br />
+<em>Scalar</em>; usually a string of characters</li>
+<li><code>method</code> &rarr; <code>indexing</code> &rarr; <code>stopwords</code><br />
+<strong>Description:</strong><br />
+Name of the stopword list.<br />
+<strong>Type:</strong><br />
+<em>Scalar</em>; usually a string of characters</li>
+<li><code>method</code> &rarr; <code>retrieval</code><br />
+<strong>Description:</strong><br />
+Each mapping represents one component of a ranking pipeline, i.e., it is also possible to report multi-stage ranking pipelines by referring to previous ranking stages. The following scalars should be reported if required:<br />
+<code>method</code> &rarr; <code>retrieval</code> &rarr; <code>name</code>: Name of the ranking stage component.<br />
+<code>method</code> &rarr; <code>retrieval</code> &rarr; <code>method</code>: Name of the actual retrieval method.<br />
+<code>method</code> &rarr; <code>retrieval</code> &rarr; <code>params</code>: Parameters of the retrieval method.<br />
+<code>method</code> &rarr; <code>retrieval</code> &rarr; <code>reranks</code>: Name of the component whose output will be reranked.<br />
+<code>method</code> &rarr; <code>retrieval</code> &rarr; <code>interpolates</code>: List of components whose output is interpolated.<br />
+<code>method</code> &rarr; <code>retrieval</code> &rarr; <code>weight</code>:  Interpolation weight. <br />
+<strong>Type:</strong><br />
+<em>Sequence of mappings</em>; one mapping represents one component in a multi-stage ranking pipeline</li>
 </ul>
 <h2 id="example">Example</h2>
 <pre><code class="language-YAML">method:

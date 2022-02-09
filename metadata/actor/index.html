@@ -502,15 +502,51 @@
 <p>The metadata information about the <strong>Actor</strong> should include all available public information about the experimenter who actually executed the software of the experiments. Often this person is hidden behind the co-authorship and the metadata should report how to reach the experimenter for further questions. The <code>role</code> identifies if the authors is the original <code>experimenter</code> or the <code>reproducer</code> of a run/experiment.</p>
 <h2 id="checklist">Checklist</h2>
 <ul>
-<li><code>actor</code> &rarr; <code>name</code> </li>
-<li><code>actor</code> &rarr; <code>orcid</code> </li>
-<li><code>actor</code> &rarr; <code>team</code> </li>
-<li><code>actor</code> &rarr; <code>fields</code> </li>
-<li><code>actor</code> &rarr; <code>mail</code></li>
-<li><code>actor</code> &rarr; <code>role</code> </li>
-<li><code>actor</code> &rarr; <code>degree</code> </li>
-<li><code>actor</code> &rarr; <code>github</code> </li>
-<li><code>actor</code> &rarr; <code>twitter</code> </li>
+<li><code>actor</code> &rarr; <code>name</code><br />
+<strong>Description:</strong><br />
+Name of the Actor.<br />
+<strong>Type:</strong><br />
+<em>Scalar</em>; usually a string of characters</li>
+<li><code>actor</code> &rarr; <code>orcid</code><br />
+<strong>Description:</strong><br />
+<a href="https://orcid.org/">ORCID</a> of the Actor.<br />
+<strong>Type:</strong><br />
+<em>Scalar</em>; usually a string of characters</li>
+<li><code>actor</code> &rarr; <code>team</code><br />
+<strong>Description:</strong><br />
+Team name of which the Actor is part of.<br />
+<strong>Type:</strong><br />
+<em>Scalar</em>; usually a string of characters</li>
+<li><code>actor</code> &rarr; <code>fields</code><br />
+<strong>Description:</strong><br />
+List of the Actor's research fields.<br />
+<strong>Type:</strong><br />
+<em>Sequence of scalars</em>; usually a listing of strings</li>
+<li><code>actor</code> &rarr; <code>mail</code><br />
+<strong>Description:</strong><br />
+Mail address of the Actor.<br />
+<strong>Type:</strong><br />
+<em>Scalar</em>; usually a string of characters</li>
+<li><code>actor</code> &rarr; <code>role</code><br />
+<strong>Description:</strong><br />
+Role of the Actor. Can be <code>experimenter</code> if the original experiment is conducted or <code>reproducer</code> if the experiment is reproduced.<br />
+<strong>Type:</strong><br />
+<em>Scalar</em>; usually a string of characters</li>
+<li><code>actor</code> &rarr; <code>degree</code><br />
+<strong>Description:</strong><br />
+The academic degree of the Actor, e.g., <code>B.Sc.</code>, <code>M.Sc.</code>, or <code>Ph.D.</code><br />
+<strong>Type:</strong><br />
+<em>Scalar</em>; usually a string of characters</li>
+<li><code>actor</code> &rarr; <code>github</code><br />
+<strong>Description:</strong><br />
+<a href="https://www.github.com/">GitHub</a> handle of the Actor.<br />
+<strong>Type:</strong><br />
+<em>Scalar</em>; usually a string of characters</li>
+<li><code>actor</code> &rarr; <code>twitter</code><br />
+<strong>Description:</strong><br />
+<a href="https://www.twitter.com/">Twitter</a> handle of the Actor.<br />
+<strong>Type:</strong><br />
+<em>Scalar</em>; usually a string of characters</li>
 </ul>
 <h2 id="example">Example</h2>
 <pre><code class="language-YAML">actor:
