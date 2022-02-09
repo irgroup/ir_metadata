@@ -15,7 +15,7 @@ metadata_handler.write_metadata()
 ```
 ## MetadataAnalyzer
 
-The `MetadataAnalyzer` is used to analyze set of different run files in reference to a run that has be be provided upon instantiation. The analyze_directory() method returns a dictionary with PRIMAD identifiers as keys and lists with the corresponding run paths as values.
+The `MetadataAnalyzer` is used to analyze sets of different run files in reference to a run that has be be provided upon instantiation. The `analyze_directory()` method returns a dictionary with PRIMAD identifiers as keys and lists with the corresponding run paths as values.
 
 
 ```Python
@@ -39,7 +39,10 @@ from repro_eval.metadata import PrimadExperiment
 
 run_candidates = experiments.get('priMad')
 
-primad_experiment = PrimadExperiment(primad='priMad', rep_base=run_candidates)
+primad_experiment = PrimadExperiment(primad='priMad', 
+                                     ref_base_path='./run.txt',
+                                     rep_base=run_candidates,
+                                     rpd_qrels='./qrels.txt')
 
 primad_experiment.evaluate()
 ```

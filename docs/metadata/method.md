@@ -1,10 +1,11 @@
 # Method
 
-The metadata information about the **Method** should include if the run is automatic or manual, i.e., derived with our without a human-in-the-loop approach, and information regarding the indexing and retrieval. While the indexing is usually composed of several processing steps including tokenization, stemming, and stopword removal, the retrieval method assign scores between a query and a document. Modern retrieval pipelines are often realized in the form of a multi-stage ranking that is supported by our metadata schema as well. If an additional ranking method reranks the output of a previous retrieval method, it can be reported by the `reranks` entry that refers to the name of the previous method. Likewise, it is possible to report interpolated scores.
+The metadata information about the **Method** should include if the run is automatic or manual, i.e., derived with our without a human-in-the-loop approach, and information regarding the indexing and retrieval. While the indexing is usually composed of several processing steps including tokenization, stemming, and stopword removal, the retrieval method assigns scores between a query and a document. Modern retrieval pipelines are often realized in the form of a multi-stage ranking that is supported by our metadata schema as well. If an additional ranking method reranks the output of a previous retrieval method, it can be reported by the `reranks` entry that refers to the name of the previous method. Likewise, it is possible to report interpolated scores.
 
 ## Checklist
 
 - `method` &rarr; `automatic`
+- `method` &rarr; `score ties`
 - `method` &rarr; `indexing` &rarr; `tokenizer`
 - `method` &rarr; `indexing` &rarr; `stemmer`
 - `method` &rarr; `indexing` &rarr; `stopwords`
