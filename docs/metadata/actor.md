@@ -1,6 +1,6 @@
 # Actor
 
-The metadata information about the **Actor** should include all available public information about the experimenter who actually executed the software of the experiments. Often this person is hidden behind the co-authorship and the metadata should report how to reach the experimenter for further questions. The `role` identifies if the authors is the original `experimenter` or the `reproducer` of a run/experiment.
+The metadata information about the **Actor** should include all available public information about the experimenter who actually executed the software of the experiments. Often this person is hidden behind the co-authorship and the metadata should report how to reach the experimenter for further questions. The `role` identifies if the author is the original `experimenter` or the `reproducer` of a run/experiment.
 
 ## Checklist
 
