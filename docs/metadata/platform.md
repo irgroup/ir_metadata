@@ -75,6 +75,10 @@ platform:
       architecture: x86_64
       operation mode: 64-bit
       number of cores: 16
+    gpu:
+      model: NVIDIA RTX A6000
+      memory: 48 GB
+      cores: 10752
     ram: 32 GB
   operating system:
     kernel: GNU/Linux 4.15.0-166-generic
