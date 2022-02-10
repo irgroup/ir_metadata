@@ -34,9 +34,9 @@ Name of the GPU architecture.
 Number of GPU cores.  
 **Type:**  
 *Scalar*; usually an integer number
-- `platform` &rarr; `hardware` &rarr; `gpu` &rarr; `ram`  
+- `platform` &rarr; `hardware` &rarr; `gpu` &rarr; `memory`  
 **Description:**  
-Amount of available RAM of the GPU; string with numbers followed by GB.  
+Amount of available memory of the GPU; string with numbers followed by GB.  
 **Type:**  
 *Scalar*; usually a string of characters
 - `platform` &rarr; `hardware` &rarr; `ram`   
@@ -78,7 +78,7 @@ platform:
     gpu:
       model: NVIDIA RTX A6000
       memory: 48 GB
-      cores: 10752
+      number of cores: 10752
     ram: 32 GB
   operating system:
     kernel: GNU/Linux 4.15.0-166-generic
