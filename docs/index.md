@@ -1,4 +1,4 @@
-# Supporting Reproducible IR Experiments with Metadata Annotations of Open Runs
+# `ir_metadata` <br> An Extensible Metadata Schema <br> for Information Retrieval Experiments
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]()
 [![DOI](https://zenodo.org/badge/DOI/10.1234/zenodo.1234567.svg)]()

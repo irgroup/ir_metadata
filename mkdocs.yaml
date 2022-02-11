@@ -1,5 +1,5 @@
 site_name: ir_metadata
-site_url: https://irgroup.github.io/ir_metadata
+site_url: https://ir-metadata.github.io/
 theme: 
     name: material
     favicon: 
@@ -15,7 +15,7 @@ theme:
     font:
         text: Roboto
 nav:
-    - Metadata Annotations of Open Runs: index.md
+    - Metadata for IR Experiments: index.md
     - 'Metadata schema': 
         - 'Overview': metadata/overview.md
         - 'Platform': metadata/platform.md
@@ -27,8 +27,8 @@ nav:
     - 'Software support': software.md  
     - Dataset: dataset.md
     - Colab notebook: colab.md
-repo_url: https://github.com/irgroup/ir_metadata
+repo_url: https://github.com/ir-metadata/
 repo_name: ir_metadata
-edit_uri: https://github.com/irgroup/ir_metadata/tree/master/docs
+edit_uri: https://github.com/ir-metadata/website/tree/master/docs
 
 

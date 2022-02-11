@@ -1,1 +1,0 @@
-Please visit [https://irgroup.github.io/ir_metadata/](https://irgroup.github.io/ir_metadata/) for more information.
