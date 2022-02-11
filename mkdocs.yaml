@@ -1,5 +1,5 @@
 site_name: ir_metadata
-site_url: https://ir-metadata.github.io/
+site_url: https://irgroup.github.io/ir_metadata/
 theme: 
     name: material
     favicon: 
@@ -27,8 +27,8 @@ nav:
     - 'Software support': software.md  
     - Dataset: dataset.md
     - Colab notebook: colab.md
-repo_url: https://github.com/ir-metadata/
+repo_url: https://github.com/irgroup/ir-metadata/
 repo_name: ir_metadata
-edit_uri: https://github.com/ir-metadata/website/tree/master/docs
+edit_uri: https://github.com/irgroup/ir-metadata/tree/master/docs
 
 
