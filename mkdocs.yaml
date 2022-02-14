@@ -27,8 +27,8 @@ nav:
     - 'Software support': software.md  
     - Dataset: dataset.md
     - Colab notebook: colab.md
-repo_url: https://github.com/irgroup/ir-metadata/
+repo_url: https://github.com/irgroup/ir_metadata/
 repo_name: ir_metadata
-edit_uri: https://github.com/irgroup/ir-metadata/tree/master/docs
+edit_uri: https://github.com/irgroup/ir_metadata/tree/master/docs
 
 
