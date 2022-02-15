@@ -1,6 +1,6 @@
 ## Metadata schema
 
-In the following, we provide an overview of the metadata, but we also refer the interested reader to our SIGIR resource paper where each (sub)component is backed with studies from the literature.
+In the following, we provide an overview of the metadata, but we also refer the interested reader to our resource paper where each (sub)component is backed with studies from the literature.
 
 Our metadata schema is based on **PRIMAD** which stands for **P**latform, **R**esearch goal, **I**mplementation, **M**ethod, **A**ctor, **D**ata. Each of these components is essential for reproducible IR experimentation. We align the metadata information to the PRIMAD model and propose subcomponents that should be added to each metadata entry if required.
 

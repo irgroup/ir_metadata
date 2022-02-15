@@ -7,6 +7,6 @@ Experimentation in information retrieval (IR) research is an inherently data-dri
 
 From a practical point of view, we propose to add the metadata, similar to a file header, as comments in the beginning of the run file. The commonly used evaluation toolkit [`trec_eval`](https://github.com/usnistgov/trec_eval) allows to [add comments in the run files](https://github.com/usnistgov/trec_eval/issues/20) by starting line comments with `#` and an official support is in development for [`v10.0`](https://github.com/usnistgov/trec_eval/tree/version-10.0-dev).
 
-This website hosts an introduction of the outlined metadata schema of Open Runs for which more details and background information can be found in our SIGIR resource paper. For each PRIMAD component this website provides [checklists](metadata/overview) that can be used as a reference when annotating run files in order to prepare them for reproducibility.
+This website hosts an introduction of the outlined metadata schema of Open Runs for which more details and background information can be found in our resource paper. For each PRIMAD component this website provides [checklists](metadata/overview) that can be used as a reference when annotating run files in order to prepare them for reproducibility.
 
 Besides this website, we give an introduction to the metadata and the software support of [`repro_eval`](https://github.com/irgroup/repro_eval) in a [Colab notebook]() that makes use of some annotated runs that are taken from our curated dataset with annotated runs hosted in a [Zenodo]() archive.
