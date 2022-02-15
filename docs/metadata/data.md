@@ -1,35 +1,58 @@
 # Data
 
-The metadata information about the **Data** should include the test collection, training data and others. For the test collection, the data source as well as the location of the qrels and topics files have to be reported. If available, the identifier that is chosen by the data catalog [`ir_datasets`](https://ir-datasets.com/) should be reported as well. The example below uses another test collection as training data, but generally, this entry should be reported as a list, especially if more than one data source is used in the experiments. The third subcomponent `other` covers miscellaneous information related to the data, for instance, about word embeddings or stopwords.
+The **Data** component comprises the input data of the experiment. The metadata information about the Data should include the test collection, training data and others. For the test collection, the data source as well as the location of the qrels and topics files have to be reported. If available, the identifier that is chosen by the data catalog [`ir_datasets`](https://ir-datasets.com/) should be reported as well. The example below uses another test collection as training data, but generally, this entry should be reported as a list, especially if more than one data source is used in the experiments. The third subcomponent `other` covers miscellaneous information related to the data, for instance, about word embeddings or stopwords.
 
 ## Checklist
 
 - `data` &rarr; `test collection`  
-**Description:**  
-A test collection includes but is not limited to the following components:  
-`data` &rarr; `test collection` &rarr; `name`: Name of the test collection.   
-`data` &rarr; `test collection` &rarr; `source`: Official source of the collection.      
-`data` &rarr; `test collection` &rarr; `qrels`: Source of the qrels.    
-`data` &rarr; `test collection` &rarr; `topics`:  Source of the topic file.  
-`data` &rarr; `test collection` &rarr; `ir_datasets`: Identifier in [`ir_datasets`](https://ir-datasets.com/).  
-**Type:**  
-*Collection of scalars*
+**Description:** A test collection includes but is not limited to a `name`, `source`, `qrels`, `topics`, and an `ir_datasets` identifier.    
+**Type:** Collection of scalars    
+- `data` &rarr; `test collection` &rarr; `name`   
+**Description:** Name of the test collection.   
+**Type:**  Scalar   
+**Encoding:**  [UTF-8](https://www.unicode.org/main.html) encoded string of characters according to [RFC3629](https://www.ietf.org/rfc/rfc3629.txt)
+- `data` &rarr; `test collection` &rarr; `source`  
+**Description:** Official source of the collection.  
+**Type:** Scalar  
+**Encoding:**  URI according to [RFC2396](https://www.ietf.org/rfc/rfc2396.txt)      
+- `data` &rarr; `test collection` &rarr; `qrels`   
+**Description:** Source of the qrels.    
+**Type:** Scalar  
+**Encoding:**  URI according to [RFC2396](https://www.ietf.org/rfc/rfc2396.txt)   
+- `data` &rarr; `test collection` &rarr; `topics`  
+**Description:** Source of the topic file.   
+**Type:** Scalar  
+**Encoding:**  URI according to [RFC2396](https://www.ietf.org/rfc/rfc2396.txt)   
+- `data` &rarr; `test collection` &rarr; `ir_datasets`  
+**Description:** Identifier in [`ir_datasets`](https://ir-datasets.com/).  
+**Type:** Scalar  
+**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters according to [RFC3629](https://www.ietf.org/rfc/rfc3629.txt)  
 
 - `data` &rarr; `training data`  
-**Description:**  
-List of different training data sources that are used in the experiments.   
-`data` &rarr; `training data` &rarr; `name`  
-`data` &rarr; `training data` &rarr; `source`  
-**Type:**  
-*Sequence of mappings*; a mapping usually has a `name` and a `source`
+**Description:** List of different training data sources that are used in the experiments represented as *mappings*, a single mapping usually has a `name` and a `source`.  
+**Type:** Sequence of mappings   
+- `data` &rarr; `training data` &rarr; `name`  
+**Description:**  Name of the training data resource.  
+**Type:** Scalar  
+**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters according to [RFC3629](https://www.ietf.org/rfc/rfc3629.txt)
+- `data` &rarr; `training data` &rarr; `source`  
+**Description:**  Source location of the training data resource.   
+**Type:** Scalar  
+**Encoding:** URI according to [RFC2396](https://www.ietf.org/rfc/rfc2396.txt)      
+
 
 - `data` &rarr; `other`  
-**Description:**  
-List of other data sources that are used in the experiments, for instance, external stopword lists, thesauri, or word embeddings.    
-`data` &rarr; `other` &rarr; `name`  
-`data` &rarr; `other` &rarr; `source`  
-**Type:**  
-*Sequence of mappings*; a mapping usually has a `name` and a `source`
+**Description:** List of other data sources that are used in the experiments, for instance, external stopword lists, thesauri, or word embeddings. These resources are represented as *mappings*, a single mapping usually has a `name` and a `source`.    
+**Type:** Sequence of mappings  
+- `data` &rarr; `other` &rarr; `name`  
+**Description:**  Name of the data resource.  
+**Type:** Scalar  
+**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters according to [RFC3629](https://www.ietf.org/rfc/rfc3629.txt)
+- `data` &rarr; `other` &rarr; `source`  
+**Description:** Source location of the data resource.  
+**Type:** Scalar  
+**Encoding:** URI according to [RFC2396](https://www.ietf.org/rfc/rfc2396.txt)    
+
 
 ## Example
 

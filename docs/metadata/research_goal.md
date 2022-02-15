@@ -1,60 +1,49 @@
 # Research goal
 
-The metadata information about the **Research goal** should include information about the venue for which the study was made, the corresponding publications, as well as some information about the evaluation. If the [Actor](../actor) is reported as `reproducer`, the `baseline` refers to the tag of the original run that is reimplemented, otherwise, it should be a strong and reasonable baseline if the [Actor](../actor) is the original `experimenter`.
+The **Research goal** describes the purpose of the study. The metadata information about the Research goal should include information about the venue for which the study was made, the corresponding publications, as well as some information about the evaluation. If the [Actor](../actor) is reported as `reproducer`, the `baseline` refers to the tag of the original run that is reimplemented, otherwise, it should be a strong and reasonable baseline if the [Actor](../actor) is the original `experimenter`.
 
 ## Checklist
 
 - `research goal` &rarr; `venue` &rarr; `name`  
-**Description:**  
-Name of the venue (e.g. journal or conference) at which is the study is published.  
-**Type:**  
-*Scalar*; usually a string of characters
+**Description:** Acronym (if available) or name of the venue (e.g. journal or conference) at which is the study is published.    
+**Type:** Scalar  
+**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of according to [RFC3629](https://www.ietf.org/rfc/rfc3629.txt)   
 - `research goal` &rarr; `venue` &rarr; `year`  
-**Description:**  
-Year in which the study was published.  
-**Type:**  
-*Scalar*; usually an integer number
+**Description:** Year in which the study was published.  
+**Type:** Scalar  
+**Encoding:** A decimal integer number  
 - `research goal` &rarr; `publication` &rarr; `dblp`  
-**Description:**  
-URL of the publication in the [dblp - computer science bibliography](https://dblp.uni-trier.de/).  
-**Type:**  
-*Scalar*; usually a string of characters
+**Description:** URL of the publication in the [dblp - computer science bibliography](https://dblp.uni-trier.de/).  
+**Type:** Scalar  
+**Encoding:** URI according to [RFC2396](https://www.ietf.org/rfc/rfc2396.txt)   
 - `research goal` &rarr; `publication` &rarr; `doi`  
-**Description:**  
-DOI of the publication.  
-**Type:**  
-*Scalar*; usually a string of characters
+**Description:** DOI of the publication.  
+**Type:** Scalar  
+**Encoding:** URI according to [RFC2396](https://www.ietf.org/rfc/rfc2396.txt)  
 - `research goal` &rarr; `publication` &rarr; `arxiv`  
-**Description:**  
-URL to the [arXiv](https://dblp.uni-trier.de/) publication.  
-**Type:**  
-*Scalar*; usually a string of characters
+**Description:** URL to the [arXiv](https://dblp.uni-trier.de/) publication.    
+**Type:** Scalar  
+**Encoding:** URI according to [RFC2396](https://www.ietf.org/rfc/rfc2396.txt)   
 - `research goal` &rarr; `publication` &rarr; `url`  
-**Description:**  
-Custom URL where is the publication is hosted.    
-**Type:**  
-*Scalar*; usually a string of characters
+**Description:** Custom URL where is the publication is hosted.    
+**Type:** Scalar  
+**Encoding:** URI according to [RFC2396](https://www.ietf.org/rfc/rfc2396.txt)   
 - `research goal` &rarr; `publication` &rarr; `abstract`  
-**Description:**  
-Abstract of the publication.    
-**Type:**  
-*Scalar*; usually a string of characters
+**Description:** Abstract of the publication.    
+**Type:** Scalar  
+**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of according to [RFC3629](https://www.ietf.org/rfc/rfc3629.txt)  
 - `research goal` &rarr; `evaluation` &rarr; `reported_measures`  
-**Description:**  
-A list of measures that were evaluated. We propose to follow `trec_eval`'s naming convention of the measures.   
-**Type:**  
-*Sequence of scalars*; usually a listing of strings
+**Description:** A list of measures that were evaluated. We propose to follow `trec_eval`'s naming convention of the measures.   
+**Type:**  Sequence of scalars  
+**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of according to [RFC3629](https://www.ietf.org/rfc/rfc3629.txt) 
 - `research goal` &rarr; `evaluation` &rarr; `baseline`  
-**Description:**  
-The run tag of the baseline that is used in the experiments. If the [Actor](../actor) is the original `experimenter`, the baseline should be adequate and state-of-the-art. If the Actor is a `reproducer` the baseline refers to the run that is reproduced.  
-**Type:**  
-*Sequence of scalars*; usually a listing of strings
+**Description:** The run tag of the baseline that is used in the experiments. If the [Actor](../actor) is the original `experimenter`, the baseline should be adequate and state-of-the-art. If the Actor is a `reproducer` the baseline refers to the run that is reproduced.  
+**Type:** Sequence of scalars  
+**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of according to [RFC3629](https://www.ietf.org/rfc/rfc3629.txt) 
 - `research goal` &rarr; `evaluation` &rarr; `significance test`  
-**Description:**  
-Significance tests that were used as part of the experimental evaluations. If required the corresponding correction method should be reported as well.    
-**Type:**  
-*Sequence of mappings*; a single mapping usually contains a scalar of the `name` and `correction method`
-
+**Description:** Significance tests that were used as part of the experimental evaluations. If required the corresponding correction method should be reported as well.    
+**Type:** Sequence of mappings  
+**Encoding:**  [UTF-8](https://www.unicode.org/main.html) encoded string of according to [RFC3629](https://www.ietf.org/rfc/rfc3629.txt)
 
 ## Example
 
@@ -75,6 +64,6 @@ research goal:
     baseline:
     - WCrobust04
     significance test:
-      - name: 't-test'
-        correction method: 'bonferroni' 
+      - name: t-test
+        correction method: bonferroni
 ```

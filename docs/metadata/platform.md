@@ -1,69 +1,57 @@
 # Platform
 
-The metadata information about the **Platform** should include the underlying hardware, the operating system, and the used software libraries. `software` covers every package or library that is used for the [Implementation](../implementation). If a retrieval toolkit is used, it should be reported explicitly.
+The **Platform** comprises the hard- and software underlying the actual [Implementation](../implementation). The metadata information about the Platform should include the underlying hardware, the operating system, and the used software libraries. `software` covers every package or library that is used for the [Implementation](../implementation). If a retrieval toolkit is used, it should be reported explicitly.
 
 ## Checklist
 
 - `platform` &rarr; `hardware` &rarr; `cpu` &rarr; `model`  
-**Description:**  
-Name of the CPU model.    
-**Type:**  
-*Scalar*; usually a string of characters
+**Description:** Name of the CPU model.  
+**Type:** Scalar  
+**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters according to [RFC3629](https://www.ietf.org/rfc/rfc3629.txt)  
 - `platform` &rarr; `hardware` &rarr; `cpu` &rarr; `architecture`  
-**Description:**  
-Identifier of the CPU architecture.  
-**Type:**  
-*Scalar*; usually a string of characters
+**Description:** Identifier of the CPU architecture.  
+**Type:** Scalar  
+**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters according to [RFC3629](https://www.ietf.org/rfc/rfc3629.txt)  
 - `platform` &rarr; `hardware` &rarr; `cpu` &rarr; `operation mode`  
-**Description:**  
-Operation mode of the CPU.  
-**Type:**  
-*Scalar*; usually a string of characters
+**Description:** Operation mode of the CPU.  
+**Type:** Scalar  
+**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters according to [RFC3629](https://www.ietf.org/rfc/rfc3629.txt)  
 - `platform` &rarr; `hardware` &rarr; `cpu` &rarr; `number of cores`  
-**Description:**  
-Number of CPU cores.  
-**Type:**  
-*Scalar*; usually an integer number
+**Description:** Number of CPU cores.  
+**Type:** Scalar  
+**Encoding:** A decimal integer number.    
 - `platform` &rarr; `hardware` &rarr; `gpu` &rarr; `architecture`  
-**Description:**  
-Name of the GPU architecture.  
-**Type:**  
-*Scalar*; usually a string of characters
+**Description:** Name of the GPU architecture.  
+**Type:** Scalar  
+**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters according to [RFC3629](https://www.ietf.org/rfc/rfc3629.txt)   
 - `platform` &rarr; `hardware` &rarr; `gpu` &rarr; `number of cores`  
-**Description:**  
-Number of GPU cores.  
-**Type:**  
-*Scalar*; usually an integer number
+**Description:** Number of GPU cores.    
+**Type:** Scalar  
+**Encoding:** A decimal integer number.    
 - `platform` &rarr; `hardware` &rarr; `gpu` &rarr; `memory`  
-**Description:**  
-Amount of available memory of the GPU; string with numbers followed by GB.  
-**Type:**  
-*Scalar*; usually a string of characters
+**Description:** Amount of available memory of the GPU; string with numbers followed by GB.  
+**Type:** Scalar    
+**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters according to [RFC3629](https://www.ietf.org/rfc/rfc3629.txt)  
 - `platform` &rarr; `hardware` &rarr; `ram`   
-**Description:**  
-Amount of available RAM; string with numbers followed by GB.  
-**Type:**  
-*Scalar*; usually a string of characters
+**Description:** Amount of available RAM; string with numbers followed by GB.  
+**Type:** Scalar  
+**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters according to [RFC3629](https://www.ietf.org/rfc/rfc3629.txt) 
 - `platform` &rarr; `operating system` &rarr; `kernel`  
-**Description:**  
-The kernel version of the operating system.  
-**Type:**  
-*Scalar*; usually a string of characters
+**Description:** The kernel version of the operating system.  
+**Type:** Scalar  
+**Encoding:**  [UTF-8](https://www.unicode.org/main.html) encoded string of characters according to [RFC3629](https://www.ietf.org/rfc/rfc3629.txt)  
 - `platform` &rarr; `operating system` &rarr; `distribution`   
-**Description:**  
-The name of the operating system's distribution.   
-**Type:**  
-*Scalar*; usually a string of characters
+**Description:** The name of the operating system's distribution.   
+**Type:** Scalar  
+**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters according to [RFC3629](https://www.ietf.org/rfc/rfc3629.txt)  
 - `platform` &rarr; `software` &rarr; `libraries`  
-**Description:**  
-Names and versions of the software libraries and packages underlying the experiment's Implementation.   
-**Type:**  
-*Sequence of scalars* for each programming language; string representing the name of the software library and version if available
+**Description:** Names and versions of the software libraries and packages underlying the experiment's [Implementation](../implementation) with the following syntax `<software-libray>==<version>`. If possible, libraries and packages of different programming languages should be in separate nodes (see example below).   
+**Type:** Sequence of scalars  
+**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters according to [RFC3629](https://www.ietf.org/rfc/rfc3629.txt)  
 - `platform` &rarr; `software` &rarr; `retrieval toolkit`  
-**Description:**  
-Names and versions of the retrieval toolkits underlying the experiment's [Implementation](../implementation).  
-**Type:**  
-*Sequence of scalars*; string representing the name of the retrieval toolkit and version if available
+**Description:** Names and versions of the retrieval toolkits underlying the experiment's [Implementation](../implementation) with the following syntax `<software-libray>==<version>`.  
+**Type:** Sequence of scalars  
+**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters according to [RFC3629](https://www.ietf.org/rfc/rfc3629.txt)  
 
 ## Example
 
