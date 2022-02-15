@@ -499,39 +499,62 @@
 
 
 <h1 id="data">Data</h1>
-<p>The metadata information about the <strong>Data</strong> should include the test collection, training data and others. For the test collection, the data source as well as the location of the qrels and topics files have to be reported. If available, the identifier that is chosen by the data catalog <a href="https://ir-datasets.com/"><code>ir_datasets</code></a> should be reported as well. The example below uses another test collection as training data, but generally, this entry should be reported as a list, especially if more than one data source is used in the experiments. The third subcomponent <code>other</code> covers miscellaneous information related to the data, for instance, about word embeddings or stopwords.</p>
+<p>The <strong>Data</strong> component comprises the input data of the experiment. The metadata information about the Data should include the test collection, training data and others. For the test collection, the data source as well as the location of the qrels and topics files have to be reported. If available, the identifier that is chosen by the data catalog <a href="https://ir-datasets.com/"><code>ir_datasets</code></a> should be reported as well. The example below uses another test collection as training data, but generally, this entry should be reported as a list, especially if more than one data source is used in the experiments. The third subcomponent <code>other</code> covers miscellaneous information related to the data, for instance, about word embeddings or stopwords.</p>
 <h2 id="checklist">Checklist</h2>
 <ul>
+<li><code>data</code> &rarr; <code>test collection</code><br />
+<strong>Description:</strong> A test collection includes but is not limited to a <code>name</code>, <code>source</code>, <code>qrels</code>, <code>topics</code>, and an <code>ir_datasets</code> identifier.  <br />
+<strong>Type:</strong> Collection of scalars    </li>
+<li><code>data</code> &rarr; <code>test collection</code> &rarr; <code>name</code> <br />
+<strong>Description:</strong> Name of the test collection. <br />
+<strong>Type:</strong>  Scalar <br />
+<strong>Encoding:</strong>  <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters according to <a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a></li>
+<li><code>data</code> &rarr; <code>test collection</code> &rarr; <code>source</code><br />
+<strong>Description:</strong> Official source of the collection.<br />
+<strong>Type:</strong> Scalar<br />
+<strong>Encoding:</strong>  URI according to <a href="https://www.ietf.org/rfc/rfc2396.txt">RFC2396</a>      </li>
+<li><code>data</code> &rarr; <code>test collection</code> &rarr; <code>qrels</code> <br />
+<strong>Description:</strong> Source of the qrels.  <br />
+<strong>Type:</strong> Scalar<br />
+<strong>Encoding:</strong>  URI according to <a href="https://www.ietf.org/rfc/rfc2396.txt">RFC2396</a>   </li>
+<li><code>data</code> &rarr; <code>test collection</code> &rarr; <code>topics</code><br />
+<strong>Description:</strong> Source of the topic file. <br />
+<strong>Type:</strong> Scalar<br />
+<strong>Encoding:</strong>  URI according to <a href="https://www.ietf.org/rfc/rfc2396.txt">RFC2396</a>   </li>
 <li>
-<p><code>data</code> &rarr; <code>test collection</code><br />
-<strong>Description:</strong><br />
-A test collection includes but is not limited to the following components:<br />
-<code>data</code> &rarr; <code>test collection</code> &rarr; <code>name</code>: Name of the test collection. <br />
-<code>data</code> &rarr; <code>test collection</code> &rarr; <code>source</code>: Official source of the collection.    <br />
-<code>data</code> &rarr; <code>test collection</code> &rarr; <code>qrels</code>: Source of the qrels.  <br />
-<code>data</code> &rarr; <code>test collection</code> &rarr; <code>topics</code>:  Source of the topic file.<br />
-<code>data</code> &rarr; <code>test collection</code> &rarr; <code>ir_datasets</code>: Identifier in <a href="https://ir-datasets.com/"><code>ir_datasets</code></a>.<br />
-<strong>Type:</strong><br />
-<em>Collection of scalars</em></p>
+<p><code>data</code> &rarr; <code>test collection</code> &rarr; <code>ir_datasets</code><br />
+<strong>Description:</strong> Identifier in <a href="https://ir-datasets.com/"><code>ir_datasets</code></a>.<br />
+<strong>Type:</strong> Scalar<br />
+<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters according to <a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>  </p>
 </li>
 <li>
 <p><code>data</code> &rarr; <code>training data</code><br />
-<strong>Description:</strong><br />
-List of different training data sources that are used in the experiments. <br />
-<code>data</code> &rarr; <code>training data</code> &rarr; <code>name</code><br />
-<code>data</code> &rarr; <code>training data</code> &rarr; <code>source</code><br />
-<strong>Type:</strong><br />
-<em>Sequence of mappings</em>; a mapping usually has a <code>name</code> and a <code>source</code></p>
+<strong>Description:</strong> List of different training data sources that are used in the experiments represented as <em>mappings</em>, a single mapping usually has a <code>name</code> and a <code>source</code>.<br />
+<strong>Type:</strong> Sequence of mappings   </p>
+</li>
+<li><code>data</code> &rarr; <code>training data</code> &rarr; <code>name</code><br />
+<strong>Description:</strong>  Name of the training data resource.<br />
+<strong>Type:</strong> Scalar<br />
+<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters according to <a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a></li>
+<li>
+<p><code>data</code> &rarr; <code>training data</code> &rarr; <code>source</code><br />
+<strong>Description:</strong>  Source location of the training data resource. <br />
+<strong>Type:</strong> Scalar<br />
+<strong>Encoding:</strong> URI according to <a href="https://www.ietf.org/rfc/rfc2396.txt">RFC2396</a>      </p>
 </li>
 <li>
 <p><code>data</code> &rarr; <code>other</code><br />
-<strong>Description:</strong><br />
-List of other data sources that are used in the experiments, for instance, external stopword lists, thesauri, or word embeddings.  <br />
-<code>data</code> &rarr; <code>other</code> &rarr; <code>name</code><br />
-<code>data</code> &rarr; <code>other</code> &rarr; <code>source</code><br />
-<strong>Type:</strong><br />
-<em>Sequence of mappings</em>; a mapping usually has a <code>name</code> and a <code>source</code></p>
+<strong>Description:</strong> List of other data sources that are used in the experiments, for instance, external stopword lists, thesauri, or word embeddings. These resources are represented as <em>mappings</em>, a single mapping usually has a <code>name</code> and a <code>source</code>.  <br />
+<strong>Type:</strong> Sequence of mappings  </p>
 </li>
+<li><code>data</code> &rarr; <code>other</code> &rarr; <code>name</code><br />
+<strong>Description:</strong>  Name of the data resource.<br />
+<strong>Type:</strong> Scalar<br />
+<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters according to <a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a></li>
+<li><code>data</code> &rarr; <code>other</code> &rarr; <code>source</code><br />
+<strong>Description:</strong> Source location of the data resource.<br />
+<strong>Type:</strong> Scalar<br />
+<strong>Encoding:</strong> URI according to <a href="https://www.ietf.org/rfc/rfc2396.txt">RFC2396</a>    </li>
 </ul>
 <h2 id="example">Example</h2>
 <pre><code class="language-YAML">data:

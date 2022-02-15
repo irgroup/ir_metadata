@@ -499,45 +499,56 @@
 
 
 <h1 id="method">Method</h1>
-<p>The metadata information about the <strong>Method</strong> should include if the run is automatic or manual, i.e., derived with or without a human-in-the-loop approach, and information regarding the indexing and retrieval. While the indexing is usually composed of several processing steps including tokenization, stemming, and stopword removal, the retrieval method assigns scores between a query and a document. Modern retrieval pipelines are often realized in the form of a multi-stage ranking that is supported by our metadata schema as well. If an additional ranking method reranks the output of a previous retrieval method, it can be reported by the <code>reranks</code> entry that refers to the name of the previous method. Likewise, it is possible to report interpolated scores.</p>
+<p>The <strong>Method</strong> describes the mapping of query-document pairs to a ranking score.The metadata information about the Method should include if the run is automatic or manual, i.e., derived with or without a human-in-the-loop approach, and information regarding the indexing and retrieval. While the indexing is usually composed of several processing steps including tokenization, stemming, and stopword removal, the retrieval method assigns scores between a query and a document. Modern retrieval pipelines are often realized in the form of a multi-stage ranking that is supported by our metadata schema as well. If an additional ranking method reranks the output of a previous retrieval method, it can be reported by the <code>reranks</code> entry that refers to the name of the previous method. Likewise, it is possible to report interpolated scores.</p>
 <h2 id="checklist">Checklist</h2>
 <ul>
 <li><code>method</code> &rarr; <code>automatic</code><br />
-<strong>Description:</strong><br />
-Boolean value indicating if it is a automatic (<code>true</code>) or manual (<code>false</code>) run. <br />
-<strong>Type:</strong><br />
-<em>Boolean</em>; <code>true</code> if automatic, <code>false</code> if manual</li>
+<strong>Description:</strong> Boolean value indicating if it is a automatic (<code>true</code>) or manual (<code>false</code>) run. <br />
+<strong>Type:</strong> Scalar<br />
+<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of according to <a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>; either <code>true</code> or <code>false</code>        </li>
 <li><code>method</code> &rarr; <code>score ties</code><br />
-<strong>Description:</strong><br />
-Name of the method used to break score ties in the ranking.<br />
-<strong>Type:</strong><br />
-<em>Scalar</em>; usually a string of characters</li>
+<strong>Description:</strong> Name of the method used to break score ties in the ranking.<br />
+<strong>Type:</strong> Scalar<br />
+<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters according to <a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>    </li>
 <li><code>method</code> &rarr; <code>indexing</code> &rarr; <code>tokenizer</code><br />
-<strong>Description:</strong><br />
-Name of the tokenizer. <br />
-<strong>Type:</strong><br />
-<em>Scalar</em>; usually a string of characters</li>
+<strong>Description:</strong> Name of the tokenizer. If available, it can be reported by the class in the software package (see example below).<br />
+<strong>Type:</strong> Scalar<br />
+<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters according to <a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>    </li>
 <li><code>method</code> &rarr; <code>indexing</code> &rarr; <code>stemmer</code><br />
-<strong>Description:</strong><br />
-Name of the stemmer.<br />
-<strong>Type:</strong><br />
-<em>Scalar</em>; usually a string of characters</li>
+<strong>Description:</strong> Name of the stemmer. If available, it can be reported by the class in the software package (see example below).<br />
+<strong>Type:</strong> Scalar<br />
+<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters according to <a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>    </li>
 <li><code>method</code> &rarr; <code>indexing</code> &rarr; <code>stopwords</code><br />
-<strong>Description:</strong><br />
-Name of the stopword list.<br />
-<strong>Type:</strong><br />
-<em>Scalar</em>; usually a string of characters</li>
+<strong>Description:</strong> Name of the stopword list. If available, it can be reported by the class in the software package (see example below).<br />
+<strong>Type:</strong> Scalar<br />
+<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters according to <a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>    </li>
 <li><code>method</code> &rarr; <code>retrieval</code><br />
-<strong>Description:</strong><br />
-Each mapping represents one component of a ranking pipeline, i.e., it is also possible to report multi-stage ranking pipelines by referring to previous ranking stages. The following scalars should be reported if required:<br />
-<code>method</code> &rarr; <code>retrieval</code> &rarr; <code>name</code>: Name of the ranking stage component.<br />
-<code>method</code> &rarr; <code>retrieval</code> &rarr; <code>method</code>: Name of the actual retrieval method.<br />
-<code>method</code> &rarr; <code>retrieval</code> &rarr; <code>params</code>: Parameters of the retrieval method.<br />
-<code>method</code> &rarr; <code>retrieval</code> &rarr; <code>reranks</code>: Name of the component whose output will be reranked.<br />
-<code>method</code> &rarr; <code>retrieval</code> &rarr; <code>interpolates</code>: List of components whose output is interpolated.<br />
-<code>method</code> &rarr; <code>retrieval</code> &rarr; <code>weight</code>:  Interpolation weight. <br />
-<strong>Type:</strong><br />
-<em>Sequence of mappings</em>; one mapping represents one component in a multi-stage ranking pipeline</li>
+<strong>Description:</strong> The retrieval approach is documented by a sequence of mappings, where each mapping represents one component of a ranking pipeline, i.e., it is also possible to report multi-stage ranking pipelines by referring to previous ranking stages.<br />
+<strong>Type:</strong> Sequence of mappings  </li>
+<li><code>method</code> &rarr; <code>retrieval</code> &rarr; <code>name</code><br />
+<strong>Description:</strong> Name of the ranking stage component.<br />
+<strong>Type:</strong> Scalar<br />
+<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters according to <a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>    </li>
+<li><code>method</code> &rarr; <code>retrieval</code> &rarr; <code>method</code><br />
+<strong>Description:</strong> Name of the actual retrieval method.<br />
+<strong>Type:</strong> Scalar<br />
+<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters according to <a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>    </li>
+<li><code>method</code> &rarr; <code>retrieval</code> &rarr; <code>params</code><br />
+<strong>Description:</strong> Parameters of the retrieval method.<br />
+<strong>Type:</strong> Sequence of scalars  <br />
+<strong>Encoding:</strong> Depending on the parameter, a single mapping is defined by the parameter name and a decimal integer or floating number.    </li>
+<li><code>method</code> &rarr; <code>retrieval</code> &rarr; <code>reranks</code><br />
+<strong>Description:</strong> Name of the component whose output will be reranked.<br />
+<strong>Type:</strong> Scalar<br />
+<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters according to <a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>    </li>
+<li><code>method</code> &rarr; <code>retrieval</code> &rarr; <code>interpolates</code><br />
+<strong>Description:</strong> Name of the component whose output will be reranked. <br />
+<strong>Type:</strong> Sequence of scalars  <br />
+<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters according to <a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>    </li>
+<li><code>method</code> &rarr; <code>retrieval</code> &rarr; <code>weight</code><br />
+<strong>Description:</strong> Interpolation weight. <br />
+<strong>Type:</strong> Scalar<br />
+<strong>Encoding:</strong>  A decimal integer or floating number.  </li>
 </ul>
 <h2 id="example">Example</h2>
 <pre><code class="language-YAML">method:

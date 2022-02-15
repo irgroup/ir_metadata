@@ -499,69 +499,57 @@
 
 
 <h1 id="platform">Platform</h1>
-<p>The metadata information about the <strong>Platform</strong> should include the underlying hardware, the operating system, and the used software libraries. <code>software</code> covers every package or library that is used for the <a href="../implementation">Implementation</a>. If a retrieval toolkit is used, it should be reported explicitly.</p>
+<p>The <strong>Platform</strong> comprises the hard- and software underlying the actual <a href="../implementation">Implementation</a>. The metadata information about the Platform should include the underlying hardware, the operating system, and the used software libraries. <code>software</code> covers every package or library that is used for the <a href="../implementation">Implementation</a>. If a retrieval toolkit is used, it should be reported explicitly.</p>
 <h2 id="checklist">Checklist</h2>
 <ul>
 <li><code>platform</code> &rarr; <code>hardware</code> &rarr; <code>cpu</code> &rarr; <code>model</code><br />
-<strong>Description:</strong><br />
-Name of the CPU model.  <br />
-<strong>Type:</strong><br />
-<em>Scalar</em>; usually a string of characters</li>
+<strong>Description:</strong> Name of the CPU model.<br />
+<strong>Type:</strong> Scalar<br />
+<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters according to <a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>  </li>
 <li><code>platform</code> &rarr; <code>hardware</code> &rarr; <code>cpu</code> &rarr; <code>architecture</code><br />
-<strong>Description:</strong><br />
-Identifier of the CPU architecture.<br />
-<strong>Type:</strong><br />
-<em>Scalar</em>; usually a string of characters</li>
+<strong>Description:</strong> Identifier of the CPU architecture.<br />
+<strong>Type:</strong> Scalar<br />
+<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters according to <a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>  </li>
 <li><code>platform</code> &rarr; <code>hardware</code> &rarr; <code>cpu</code> &rarr; <code>operation mode</code><br />
-<strong>Description:</strong><br />
-Operation mode of the CPU.<br />
-<strong>Type:</strong><br />
-<em>Scalar</em>; usually a string of characters</li>
+<strong>Description:</strong> Operation mode of the CPU.<br />
+<strong>Type:</strong> Scalar<br />
+<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters according to <a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>  </li>
 <li><code>platform</code> &rarr; <code>hardware</code> &rarr; <code>cpu</code> &rarr; <code>number of cores</code><br />
-<strong>Description:</strong><br />
-Number of CPU cores.<br />
-<strong>Type:</strong><br />
-<em>Scalar</em>; usually an integer number</li>
+<strong>Description:</strong> Number of CPU cores.<br />
+<strong>Type:</strong> Scalar<br />
+<strong>Encoding:</strong> A decimal integer number.    </li>
 <li><code>platform</code> &rarr; <code>hardware</code> &rarr; <code>gpu</code> &rarr; <code>architecture</code><br />
-<strong>Description:</strong><br />
-Name of the GPU architecture.<br />
-<strong>Type:</strong><br />
-<em>Scalar</em>; usually a string of characters</li>
+<strong>Description:</strong> Name of the GPU architecture.<br />
+<strong>Type:</strong> Scalar<br />
+<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters according to <a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>   </li>
 <li><code>platform</code> &rarr; <code>hardware</code> &rarr; <code>gpu</code> &rarr; <code>number of cores</code><br />
-<strong>Description:</strong><br />
-Number of GPU cores.<br />
-<strong>Type:</strong><br />
-<em>Scalar</em>; usually an integer number</li>
+<strong>Description:</strong> Number of GPU cores.  <br />
+<strong>Type:</strong> Scalar<br />
+<strong>Encoding:</strong> A decimal integer number.    </li>
 <li><code>platform</code> &rarr; <code>hardware</code> &rarr; <code>gpu</code> &rarr; <code>memory</code><br />
-<strong>Description:</strong><br />
-Amount of available memory of the GPU; string with numbers followed by GB.<br />
-<strong>Type:</strong><br />
-<em>Scalar</em>; usually a string of characters</li>
+<strong>Description:</strong> Amount of available memory of the GPU; string with numbers followed by GB.<br />
+<strong>Type:</strong> Scalar  <br />
+<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters according to <a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>  </li>
 <li><code>platform</code> &rarr; <code>hardware</code> &rarr; <code>ram</code> <br />
-<strong>Description:</strong><br />
-Amount of available RAM; string with numbers followed by GB.<br />
-<strong>Type:</strong><br />
-<em>Scalar</em>; usually a string of characters</li>
+<strong>Description:</strong> Amount of available RAM; string with numbers followed by GB.<br />
+<strong>Type:</strong> Scalar<br />
+<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters according to <a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a> </li>
 <li><code>platform</code> &rarr; <code>operating system</code> &rarr; <code>kernel</code><br />
-<strong>Description:</strong><br />
-The kernel version of the operating system.<br />
-<strong>Type:</strong><br />
-<em>Scalar</em>; usually a string of characters</li>
+<strong>Description:</strong> The kernel version of the operating system.<br />
+<strong>Type:</strong> Scalar<br />
+<strong>Encoding:</strong>  <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters according to <a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>  </li>
 <li><code>platform</code> &rarr; <code>operating system</code> &rarr; <code>distribution</code> <br />
-<strong>Description:</strong><br />
-The name of the operating system's distribution. <br />
-<strong>Type:</strong><br />
-<em>Scalar</em>; usually a string of characters</li>
+<strong>Description:</strong> The name of the operating system's distribution. <br />
+<strong>Type:</strong> Scalar<br />
+<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters according to <a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>  </li>
 <li><code>platform</code> &rarr; <code>software</code> &rarr; <code>libraries</code><br />
-<strong>Description:</strong><br />
-Names and versions of the software libraries and packages underlying the experiment's Implementation. <br />
-<strong>Type:</strong><br />
-<em>Sequence of scalars</em> for each programming language; string representing the name of the software library and version if available</li>
+<strong>Description:</strong> Names and versions of the software libraries and packages underlying the experiment's <a href="../implementation">Implementation</a> with the following syntax <code>&lt;software-libray&gt;==&lt;version&gt;</code>. If possible, libraries and packages of different programming languages should be in separate nodes (see example below). <br />
+<strong>Type:</strong> Sequence of scalars<br />
+<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters according to <a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>  </li>
 <li><code>platform</code> &rarr; <code>software</code> &rarr; <code>retrieval toolkit</code><br />
-<strong>Description:</strong><br />
-Names and versions of the retrieval toolkits underlying the experiment's <a href="../implementation">Implementation</a>.<br />
-<strong>Type:</strong><br />
-<em>Sequence of scalars</em>; string representing the name of the retrieval toolkit and version if available</li>
+<strong>Description:</strong> Names and versions of the retrieval toolkits underlying the experiment's <a href="../implementation">Implementation</a> with the following syntax <code>&lt;software-libray&gt;==&lt;version&gt;</code>.<br />
+<strong>Type:</strong> Sequence of scalars<br />
+<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters according to <a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>  </li>
 </ul>
 <h2 id="example">Example</h2>
 <pre><code class="language-YAML">platform:
