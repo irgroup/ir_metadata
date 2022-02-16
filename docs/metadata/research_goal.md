@@ -1,6 +1,6 @@
 # Research goal
 
-The **Research goal** describes the purpose of the study. The metadata information about the Research goal should include information about the venue for which the study was made, the corresponding publications, as well as some information about the evaluation. If the [Actor](../actor) is reported as `reproducer`, the `baseline` refers to the tag of the original run that is reimplemented, otherwise, it should be a strong and reasonable baseline if the [Actor](../actor) is the original `experimenter`.
+The **Research goal** describes the purpose of the study. The metadata information about the Research goal should include information about the venue for which the study was made, the corresponding publications, as well as some information about the evaluation. If the [Actor](../actor) is reported as `reproducer`, the `baseline` refers to the tag of the original run that is reimplemented, otherwise, it should be a strong and reasonable baseline if the Actor is the original `experimenter`.
 
 ## Checklist
 

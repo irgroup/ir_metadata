@@ -1,6 +1,6 @@
 # Platform
 
-The **Platform** comprises the hard- and software underlying the actual [Implementation](../implementation). The metadata information about the Platform should include the underlying hardware, the operating system, and the used software libraries. `software` covers every package or library that is used for the [Implementation](../implementation). If a retrieval toolkit is used, it should be reported explicitly.
+The **Platform** comprises the hard- and software underlying the actual [Implementation](../implementation). The metadata information about the Platform should include the underlying hardware, the operating system, and the used software libraries. `software` covers every package or library that is used for the Implementation. If a retrieval toolkit is used, it should be reported explicitly.
 
 ## Checklist
 
