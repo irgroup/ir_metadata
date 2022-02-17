@@ -505,15 +505,15 @@
 <li><code>implementation</code> &rarr; <code>executable</code> &rarr; <code>cmd</code><br />
 <strong>Description:</strong> The software command that was used to conduct the experiments, more specifically, to make the run.<br />
 <strong>Type:</strong> Scalar<br />
-<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters according to <a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>  </li>
+<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters (<a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>); <code>!!str</code>.  </li>
 <li><code>implementation</code> &rarr; <code>source</code> &rarr; <code>lang</code><br />
 <strong>Description:</strong> All programming languages that were used for the experiments.<br />
-<strong>Type:</strong> Sequence of scalars<br />
-<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters according to <a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a></li>
+<strong>Type:</strong> Sequence of scalars; <code>!!seq</code>.<br />
+<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters (<a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>); <code>!!str</code>.</li>
 <li><code>implementation</code> &rarr; <code>source</code> &rarr; <code>repository</code><br />
 <strong>Description:</strong> The URL of the corresponding software repository.<br />
 <strong>Type:</strong> Scalar<br />
-<strong>Encoding:</strong> URI according to <a href="https://www.ietf.org/rfc/rfc2396.txt">RFC2396</a>  </li>
+<strong>Encoding:</strong> URI according to <a href="https://www.ietf.org/rfc/rfc2396.txt">RFC2396</a>; <code>!!str</code>.  </li>
 <li><code>implementation</code> &rarr; <code>source</code> &rarr; <code>commit</code><br />
 <strong>Description:</strong> The commit at which the repository was used for the experiments. Both long and short versions are valid.  <br />
 <strong>Type:</strong> Scalar<br />

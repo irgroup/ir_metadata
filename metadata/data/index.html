@@ -508,53 +508,53 @@
 <li><code>data</code> &rarr; <code>test collection</code> &rarr; <code>name</code> <br />
 <strong>Description:</strong> Name of the test collection. <br />
 <strong>Type:</strong>  Scalar <br />
-<strong>Encoding:</strong>  <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters according to <a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a></li>
+<strong>Encoding:</strong>  <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters (<a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>); <code>!!str</code>.</li>
 <li><code>data</code> &rarr; <code>test collection</code> &rarr; <code>source</code><br />
 <strong>Description:</strong> Official source of the collection.<br />
 <strong>Type:</strong> Scalar<br />
-<strong>Encoding:</strong>  URI according to <a href="https://www.ietf.org/rfc/rfc2396.txt">RFC2396</a>      </li>
+<strong>Encoding:</strong>  URI according to <a href="https://www.ietf.org/rfc/rfc2396.txt">RFC2396</a>; <code>!!str</code>.      </li>
 <li><code>data</code> &rarr; <code>test collection</code> &rarr; <code>qrels</code> <br />
 <strong>Description:</strong> Source of the qrels.  <br />
 <strong>Type:</strong> Scalar<br />
-<strong>Encoding:</strong>  URI according to <a href="https://www.ietf.org/rfc/rfc2396.txt">RFC2396</a>   </li>
+<strong>Encoding:</strong>  URI according to <a href="https://www.ietf.org/rfc/rfc2396.txt">RFC2396</a>; <code>!!str</code>.   </li>
 <li><code>data</code> &rarr; <code>test collection</code> &rarr; <code>topics</code><br />
 <strong>Description:</strong> Source of the topic file. <br />
 <strong>Type:</strong> Scalar<br />
-<strong>Encoding:</strong>  URI according to <a href="https://www.ietf.org/rfc/rfc2396.txt">RFC2396</a>   </li>
+<strong>Encoding:</strong>  URI according to <a href="https://www.ietf.org/rfc/rfc2396.txt">RFC2396</a>; <code>!!str</code>.   </li>
 <li>
 <p><code>data</code> &rarr; <code>test collection</code> &rarr; <code>ir_datasets</code><br />
 <strong>Description:</strong> Identifier in <a href="https://ir-datasets.com/"><code>ir_datasets</code></a>.<br />
 <strong>Type:</strong> Scalar<br />
-<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters according to <a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>  </p>
+<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters (<a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>); <code>!!str</code>.  </p>
 </li>
 <li>
 <p><code>data</code> &rarr; <code>training data</code><br />
 <strong>Description:</strong> List of different training data sources that are used in the experiments represented as <em>mappings</em>, a single mapping usually has a <code>name</code> and a <code>source</code>.<br />
-<strong>Type:</strong> Sequence of mappings   </p>
+<strong>Type:</strong> Sequence of mappings; <code>!!seq [!!map, !!map, ...]</code>.   </p>
 </li>
 <li><code>data</code> &rarr; <code>training data</code> &rarr; <code>name</code><br />
 <strong>Description:</strong>  Name of the training data resource.<br />
 <strong>Type:</strong> Scalar<br />
-<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters according to <a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a></li>
+<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters (<a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>); <code>!!str</code>.</li>
 <li>
 <p><code>data</code> &rarr; <code>training data</code> &rarr; <code>source</code><br />
 <strong>Description:</strong>  Source location of the training data resource. <br />
 <strong>Type:</strong> Scalar<br />
-<strong>Encoding:</strong> URI according to <a href="https://www.ietf.org/rfc/rfc2396.txt">RFC2396</a>      </p>
+<strong>Encoding:</strong> URI according to <a href="https://www.ietf.org/rfc/rfc2396.txt">RFC2396</a>; <code>!!str</code>.      </p>
 </li>
 <li>
 <p><code>data</code> &rarr; <code>other</code><br />
 <strong>Description:</strong> List of other data sources that are used in the experiments, for instance, external stopword lists, thesauri, or word embeddings. These resources are represented as <em>mappings</em>, a single mapping usually has a <code>name</code> and a <code>source</code>.  <br />
-<strong>Type:</strong> Sequence of mappings  </p>
+<strong>Type:</strong> Sequence of mappings; <code>!!seq [!!map, !!map, ...]</code>.  </p>
 </li>
 <li><code>data</code> &rarr; <code>other</code> &rarr; <code>name</code><br />
 <strong>Description:</strong>  Name of the data resource.<br />
 <strong>Type:</strong> Scalar<br />
-<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters according to <a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a></li>
+<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters (<a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>); <code>!!str</code>.</li>
 <li><code>data</code> &rarr; <code>other</code> &rarr; <code>source</code><br />
 <strong>Description:</strong> Source location of the data resource.<br />
 <strong>Type:</strong> Scalar<br />
-<strong>Encoding:</strong> URI according to <a href="https://www.ietf.org/rfc/rfc2396.txt">RFC2396</a>    </li>
+<strong>Encoding:</strong> URI according to <a href="https://www.ietf.org/rfc/rfc2396.txt">RFC2396</a>; <code>!!str</code>.    </li>
 </ul>
 <h2 id="example">Example</h2>
 <pre><code class="language-YAML">data:

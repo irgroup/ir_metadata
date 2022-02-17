@@ -505,50 +505,50 @@
 <li><code>method</code> &rarr; <code>automatic</code><br />
 <strong>Description:</strong> Boolean value indicating if it is a automatic (<code>true</code>) or manual (<code>false</code>) run. <br />
 <strong>Type:</strong> Scalar<br />
-<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of according to <a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>; either <code>true</code> or <code>false</code>        </li>
+<strong>Encoding:</strong> Boolean; <code>!!bool</code>.        </li>
 <li><code>method</code> &rarr; <code>score ties</code><br />
 <strong>Description:</strong> Name of the method used to break score ties in the ranking.<br />
 <strong>Type:</strong> Scalar<br />
-<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters according to <a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>    </li>
+<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters (<a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>); <code>!!str</code>.    </li>
 <li><code>method</code> &rarr; <code>indexing</code> &rarr; <code>tokenizer</code><br />
 <strong>Description:</strong> Name of the tokenizer. If available, it can be reported by the class in the software package (see example below).<br />
 <strong>Type:</strong> Scalar<br />
-<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters according to <a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>    </li>
+<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters (<a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>); <code>!!str</code>.    </li>
 <li><code>method</code> &rarr; <code>indexing</code> &rarr; <code>stemmer</code><br />
 <strong>Description:</strong> Name of the stemmer. If available, it can be reported by the class in the software package (see example below).<br />
 <strong>Type:</strong> Scalar<br />
-<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters according to <a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>    </li>
+<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters (<a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>); <code>!!str</code>.    </li>
 <li><code>method</code> &rarr; <code>indexing</code> &rarr; <code>stopwords</code><br />
 <strong>Description:</strong> Name of the stopword list. If available, it can be reported by the class in the software package (see example below).<br />
 <strong>Type:</strong> Scalar<br />
-<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters according to <a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>    </li>
+<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters (<a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>); <code>!!str</code>.    </li>
 <li><code>method</code> &rarr; <code>retrieval</code><br />
 <strong>Description:</strong> The retrieval approach is documented by a sequence of mappings, where each mapping represents one component of a ranking pipeline, i.e., it is also possible to report multi-stage ranking pipelines by referring to previous ranking stages.<br />
-<strong>Type:</strong> Sequence of mappings  </li>
+<strong>Type:</strong> Sequence of mappings; <code>!!seq [!!map, !!map, ...]</code>.  </li>
 <li><code>method</code> &rarr; <code>retrieval</code> &rarr; <code>name</code><br />
 <strong>Description:</strong> Name of the ranking stage component.<br />
 <strong>Type:</strong> Scalar<br />
-<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters according to <a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>    </li>
+<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters (<a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>); <code>!!str</code>.    </li>
 <li><code>method</code> &rarr; <code>retrieval</code> &rarr; <code>method</code><br />
 <strong>Description:</strong> Name of the actual retrieval method.<br />
 <strong>Type:</strong> Scalar<br />
-<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters according to <a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>    </li>
+<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters (<a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>); <code>!!str</code>.    </li>
 <li><code>method</code> &rarr; <code>retrieval</code> &rarr; <code>params</code><br />
 <strong>Description:</strong> Parameter(s) of the retrieval method. Depending on the parameter, a single mapping is defined by the parameter name and a decimal integer or floating number.  <br />
 <strong>Type:</strong> Scalar  <br />
-<strong>Encoding:</strong> A decimal integer or floating number.  </li>
+<strong>Encoding:</strong> A decimal integer or floating point number; <code>!!int</code> or <code>!!float</code>.  </li>
 <li><code>method</code> &rarr; <code>retrieval</code> &rarr; <code>reranks</code><br />
 <strong>Description:</strong> Name of the component whose output will be reranked.<br />
 <strong>Type:</strong> Scalar<br />
-<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters according to <a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>    </li>
+<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters (<a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>); <code>!!str</code>.    </li>
 <li><code>method</code> &rarr; <code>retrieval</code> &rarr; <code>interpolates</code><br />
 <strong>Description:</strong> Name of the component whose output will be reranked. <br />
-<strong>Type:</strong> Sequence of scalars  <br />
-<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters according to <a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>    </li>
+<strong>Type:</strong> Sequence of scalars; <code>!!seq</code>.  <br />
+<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters (<a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>); <code>!!str</code>.    </li>
 <li><code>method</code> &rarr; <code>retrieval</code> &rarr; <code>weight</code><br />
 <strong>Description:</strong> Interpolation weight. <br />
 <strong>Type:</strong> Scalar<br />
-<strong>Encoding:</strong>  A decimal integer or floating number.  </li>
+<strong>Encoding:</strong> A decimal integer or floating point number; <code>!!int</code> or <code>!!float</code>.  </li>
 </ul>
 <h2 id="example">Example</h2>
 <pre><code class="language-YAML">method:
