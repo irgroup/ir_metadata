@@ -19,19 +19,22 @@ The **Actor** component represents the experimenter who conducts the experiments
 - `actor` &rarr; `fields`  
 **Description:** List of the Actor's research fields.  
 **Type:** Sequence of scalars; `!!seq`.  
-**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters ([RFC3629](https://www.ietf.org/rfc/rfc3629.txt)); `!!str`.
+**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters ([RFC3629](https://www.ietf.org/rfc/rfc3629.txt)); `!!str`.  
+**Naming convention:** `nlp`/`natural language processing`, `ir`/`information retrieval`, `databases`, `data analytics` `machine/deep learning`, `statistics`, `bibliometrics`, `information systems`         
 - `actor` &rarr; `mail`  
 **Description:** Mail address of the Actor.    
 **Type:** Scalar  
 **Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters ([RFC3629](https://www.ietf.org/rfc/rfc3629.txt)); `!!str`.
 - `actor` &rarr; `role`  
-**Description:** Role of the Actor. Can be `experimenter` if the original experiment is conducted or `reproducer` if the experiment is reproduced.  
+**Description:** Role of the Actor. Can be `experimenter` if is an original experiment, or `reproducer` if it is a reproduced experiment.  
 **Type:** Scalar  
-**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters ([RFC3629](https://www.ietf.org/rfc/rfc3629.txt)); `!!str`.
+**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters ([RFC3629](https://www.ietf.org/rfc/rfc3629.txt)); `!!str`.  
+**Naming convention:** `experimenter`, `reproducer`
 - `actor` &rarr; `degree`  
-**Description:** The academic degree of the Actor, e.g., `B.Sc.`, `M.Sc.`, or `Ph.D.`  
+**Description:** The academic degree of the Actor. Should be reported by the conventional abbreviations (see examples for the naming convention below).  
 **Type:** Scalar  
-**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters ([RFC3629](https://www.ietf.org/rfc/rfc3629.txt)); `!!str`.
+**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters ([RFC3629](https://www.ietf.org/rfc/rfc3629.txt)); `!!str`.  
+**Naming convention:** `B.Sc.`, `M.Sc.`, `Ph.D.`  
 - `actor` &rarr; `github`  
 **Description:** URL with the [GitHub](https://www.github.com/) handle of the Actor.  
 **Type:** Scalar  

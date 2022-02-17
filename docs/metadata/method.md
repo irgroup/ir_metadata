@@ -9,21 +9,24 @@ The **Method** describes the mapping of query-document pairs to a ranking score.
 **Type:** Scalar  
 **Encoding:** Boolean; `!!bool`.        
 - `method` &rarr; `score ties`  
-**Description:** Name of the method used to break score ties in the ranking.  
+**Description:** Name or description of the method used to break score ties in the ranking.  
 **Type:** Scalar  
 **Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters ([RFC3629](https://www.ietf.org/rfc/rfc3629.txt)); `!!str`.    
+**Naming convention:** `(reverse) alphabetical order`, `external collection`
 - `method` &rarr; `indexing` &rarr; `tokenizer`  
 **Description:** Name of the tokenizer. If available, it can be reported by the class in the software package (see example below).  
 **Type:** Scalar  
 **Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters ([RFC3629](https://www.ietf.org/rfc/rfc3629.txt)); `!!str`.    
 - `method` &rarr; `indexing` &rarr; `stemmer`  
-**Description:** Name of the stemmer. If available, it can be reported by the class in the software package (see example below).  
+**Description:** Name of the stemmer. If possible, the stemmer should be reported by the class name in the software package (see example below). If this is not possible, it should meet the naming conventions below.   
 **Type:** Scalar  
 **Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters ([RFC3629](https://www.ietf.org/rfc/rfc3629.txt)); `!!str`.    
+**Naming convention**: `Porter`, `Krovetz`, `Lovins`, `Snowball`, `n-grams`, ...  
 - `method` &rarr; `indexing` &rarr; `stopwords`  
-**Description:** Name of the stopword list. If available, it can be reported by the class in the software package (see example below).  
+**Description:** Name of the stopword list. If possible, the stopword list should be reported by the resource name in the software package or by an URI (see example below). If this is not possible, it should meet the naming conventions below, e.g., by naming the corresponding `retrieval toolkit`.  
 **Type:** Scalar  
 **Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters ([RFC3629](https://www.ietf.org/rfc/rfc3629.txt)); `!!str`.    
+**Naming convention**: `Indri`, `Lucene`, `Smart`, `Terrier`, ...  
 - `method` &rarr; `retrieval`  
 **Description:** The retrieval approach is documented by a sequence of mappings, where each mapping represents one component of a ranking pipeline, i.e., it is also possible to report multi-stage ranking pipelines by referring to previous ranking stages.  
 **Type:** Sequence of mappings; `!!seq [!!map, !!map, ...]`.  
@@ -31,8 +34,9 @@ The **Method** describes the mapping of query-document pairs to a ranking score.
 **Description:** Name of the ranking stage component.  
 **Type:** Scalar  
 **Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters ([RFC3629](https://www.ietf.org/rfc/rfc3629.txt)); `!!str`.    
+**Naming convention:**  `bm25`, `rm3`, `ax` (axiomatic reranking), `piv` (pivoted normalization method), `dir` (Dirichlet prior method), `monobert`  
 - `method` &rarr; `retrieval` &rarr; `method`  
-**Description:** Name of the actual retrieval method.  
+**Description:** Class name of the retrieval method.  
 **Type:** Scalar  
 **Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters ([RFC3629](https://www.ietf.org/rfc/rfc3629.txt)); `!!str`.    
 - `method` &rarr; `retrieval` &rarr; `params`  

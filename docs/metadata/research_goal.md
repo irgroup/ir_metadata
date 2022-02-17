@@ -5,9 +5,10 @@ The **Research goal** describes the purpose of the study. The metadata informati
 ## Checklist
 
 - `research goal` &rarr; `venue` &rarr; `name`  
-**Description:** Acronym (if available) or name of the venue (e.g., journal or conference) at which is the study is published.    
+**Description:** Acronym (if available) or name of the venue (e.g., journal or conference) at which is the study is published. A non-exhaustive list is given by the naming conventions.    
 **Type:** Scalar  
 **Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters ([RFC3629](https://www.ietf.org/rfc/rfc3629.txt)); `!!str`.   
+**Naming convention:** `CHIIR`, `CIKM`, `ECIR`, `ICTIR`, `IPM`, `IRJ`, `JASIST`, `JCDL`, `KDD`, `SIGIR`, `TOIS`, `WSDM`, `WWW`, `CLEF`, `NTCIR`, `TREC`  
 - `research goal` &rarr; `venue` &rarr; `year`  
 **Description:** Year in which the study was published (syntax: `YYYY`).  
 **Type:** Scalar  
@@ -33,9 +34,10 @@ The **Research goal** describes the purpose of the study. The metadata informati
 **Type:** Scalar  
 **Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters ([RFC3629](https://www.ietf.org/rfc/rfc3629.txt)); `!!str`.  
 - `research goal` &rarr; `evaluation` &rarr; `reported_measures`  
-**Description:** A list of measures that were evaluated. We propose to follow `trec_eval`'s naming convention of the measures.   
+**Description:** A list of measures that were evaluated. We propose to follow `trec_eval`'s naming convention of the measures (see naming convention).   
 **Type:**  Sequence of scalars; `!!seq`.  
-**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters ([RFC3629](https://www.ietf.org/rfc/rfc3629.txt)); `!!str`. 
+**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters ([RFC3629](https://www.ietf.org/rfc/rfc3629.txt)); `!!str`.  
+**Naming convention:** `map`, `P_10`, `ndcg`, `bpref`  
 - `research goal` &rarr; `evaluation` &rarr; `baseline`  
 **Description:** The run tag of the baseline that is used in the experiments. If the [Actor](../actor) is the original `experimenter`, the baseline should be adequate and state-of-the-art. If the Actor is a `reproducer`, the baseline refers to the run that is reproduced.  
 **Type:** Sequence of scalars; `!!seq`.  
@@ -46,11 +48,13 @@ The **Research goal** describes the purpose of the study. The metadata informati
 - `research goal` &rarr; `evaluation` &rarr; `significance test` &rarr; `name`  
 **Description:** Name of the significance test.     
 **Type:** Scalar    
-**Encoding:**  [UTF-8](https://www.unicode.org/main.html) encoded string of characters ([RFC3629](https://www.ietf.org/rfc/rfc3629.txt)); `!!str`.
+**Encoding:**  [UTF-8](https://www.unicode.org/main.html) encoded string of characters ([RFC3629](https://www.ietf.org/rfc/rfc3629.txt)); `!!str`.  
+**Naming convention:** `t-test` (Student's t-test), `wilcoxon` (Wilcoxon signed rank test), `sign` (sign test), `permutation` (permutation test), `bootstrap` (bootstrap test – shift method)  
 - `research goal` &rarr; `evaluation` &rarr; `significance test` &rarr; `correction method`  
 **Description:** Name of the correction method.  
 **Type:** Scalar  
-**Encoding:**  [UTF-8](https://www.unicode.org/main.html) encoded string of characters ([RFC3629](https://www.ietf.org/rfc/rfc3629.txt)); `!!str`.
+**Encoding:**  [UTF-8](https://www.unicode.org/main.html) encoded string of characters ([RFC3629](https://www.ietf.org/rfc/rfc3629.txt)); `!!str`.  
+**Naming convention:** `bonferroni` (Bonferroni correction), `holm-bonferroni` (Holm–Bonferroni method), `HMP` (harmonic mean p-value), `MRT` (Duncan's new multiple range test)  
 
 ## Example
 

@@ -11,13 +11,13 @@ Besides a short description of each PRIMAD component, we provide a checklist tha
 
 The metadata annotations should start and end with the `ir_metadata` identifier, i.e., `ir_metadata.start` in the first line and `ir_metadata.end` in the last line of the metadata header. In general, it has to follow the [YAML formatting conventions](https://yaml.org/) and in the checklists we stick to the [YAML terminology](https://yaml.org/spec/1.2.2/ext/glossary/) when describing the subcomponent types. 
 
-At the beginning, the metadata includes some general information about the current schema-version (this version), the version of the run metadata (in case the metadata is updated in the future), and the run tag that usually can be found in the last column of a TREC run. This more general information is followed by the metadata for each PRIMAD component for which we provide checklists with *descriptions*, YAML *types*, *encodings*, and examples on the following sites.
+At the beginning, the metadata includes some general information about the current schema-version (this version), the version of the run metadata (in case the metadata is updated in the future), and the run tag that usually can be found in the last column of a TREC run. This more general information is followed by the metadata for each PRIMAD component for which we provide checklists with *descriptions*, YAML *types*, *encodings*, *naming conventions* for free-text fields, and examples on the following sites.
 
 ```YAML
 ir_metadata.start
 schema-version: 0.1
 run-version: 1.0
-tag: h2oloo.ccrf.04.core17.ax_e3_0.6
+tag: bm25+rm3
 platform:
     ...
 research goal:

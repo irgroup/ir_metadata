@@ -1,6 +1,6 @@
 # Metadata module of repro_eval
 
-In order to provide a software interface for developers and experimenters, we have implemented the metadata support into [`repro_eval`](https://github.com/irgroup/repro_eval) - the reproducibility toolkit for system-oriented IR experiments. In the following we provide a brief overview of the [`metadata`]()-module and its classes, for more details we refer the interested reader to the actual implementations in the GitHub repository.
+In order to provide a software interface for developers and experimenters, we have implemented the metadata support into [`repro_eval`](https://github.com/irgroup/repro_eval) - the reproducibility toolkit for system-oriented IR experiments. In the following we provide a brief overview of the [`metadata`](https://github.com/irgroup/repro_eval/blob/8799a61611b39dd798df2767370c1dca4ce9792f/repro_eval/metadata.py)-module and its classes, for more details we refer the interested reader to the actual implementations in the GitHub repository.
 
 ## MetadataHandler
 
