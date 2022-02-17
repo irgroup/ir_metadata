@@ -507,30 +507,34 @@
 <strong>Type:</strong> Scalar<br />
 <strong>Encoding:</strong> Boolean; <code>!!bool</code>.        </li>
 <li><code>method</code> &rarr; <code>score ties</code><br />
-<strong>Description:</strong> Name of the method used to break score ties in the ranking.<br />
+<strong>Description:</strong> Name or description of the method used to break score ties in the ranking.<br />
 <strong>Type:</strong> Scalar<br />
-<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters (<a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>); <code>!!str</code>.    </li>
+<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters (<a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>); <code>!!str</code>.  <br />
+<strong>Naming convention:</strong> <code>(reverse) alphabetical order</code>, <code>external collection</code></li>
 <li><code>method</code> &rarr; <code>indexing</code> &rarr; <code>tokenizer</code><br />
 <strong>Description:</strong> Name of the tokenizer. If available, it can be reported by the class in the software package (see example below).<br />
 <strong>Type:</strong> Scalar<br />
 <strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters (<a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>); <code>!!str</code>.    </li>
 <li><code>method</code> &rarr; <code>indexing</code> &rarr; <code>stemmer</code><br />
-<strong>Description:</strong> Name of the stemmer. If available, it can be reported by the class in the software package (see example below).<br />
+<strong>Description:</strong> Name of the stemmer. If possible, the stemmer should be reported by the class name in the software package (see example below). If this is not possible, it should meet the naming conventions below. <br />
 <strong>Type:</strong> Scalar<br />
-<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters (<a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>); <code>!!str</code>.    </li>
+<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters (<a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>); <code>!!str</code>.  <br />
+<strong>Naming convention</strong>: <code>Porter</code>, <code>Krovetz</code>, <code>Lovins</code>, <code>Snowball</code>, <code>n-grams</code>, ...  </li>
 <li><code>method</code> &rarr; <code>indexing</code> &rarr; <code>stopwords</code><br />
-<strong>Description:</strong> Name of the stopword list. If available, it can be reported by the class in the software package (see example below).<br />
+<strong>Description:</strong> Name of the stopword list. If possible, the stopword list should be reported by the resource name in the software package or by an URI (see example below). If this is not possible, it should meet the naming conventions below, e.g., by naming the corresponding <code>retrieval toolkit</code>.<br />
 <strong>Type:</strong> Scalar<br />
-<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters (<a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>); <code>!!str</code>.    </li>
+<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters (<a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>); <code>!!str</code>.  <br />
+<strong>Naming convention</strong>: <code>Indri</code>, <code>Lucene</code>, <code>Smart</code>, <code>Terrier</code>, ...  </li>
 <li><code>method</code> &rarr; <code>retrieval</code><br />
 <strong>Description:</strong> The retrieval approach is documented by a sequence of mappings, where each mapping represents one component of a ranking pipeline, i.e., it is also possible to report multi-stage ranking pipelines by referring to previous ranking stages.<br />
 <strong>Type:</strong> Sequence of mappings; <code>!!seq [!!map, !!map, ...]</code>.  </li>
 <li><code>method</code> &rarr; <code>retrieval</code> &rarr; <code>name</code><br />
 <strong>Description:</strong> Name of the ranking stage component.<br />
 <strong>Type:</strong> Scalar<br />
-<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters (<a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>); <code>!!str</code>.    </li>
+<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters (<a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>); <code>!!str</code>.  <br />
+<strong>Naming convention:</strong>  <code>bm25</code>, <code>rm3</code>, <code>ax</code> (axiomatic reranking), <code>piv</code> (pivoted normalization method), <code>dir</code> (Dirichlet prior method), <code>monobert</code>  </li>
 <li><code>method</code> &rarr; <code>retrieval</code> &rarr; <code>method</code><br />
-<strong>Description:</strong> Name of the actual retrieval method.<br />
+<strong>Description:</strong> Class name of the retrieval method.<br />
 <strong>Type:</strong> Scalar<br />
 <strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters (<a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>); <code>!!str</code>.    </li>
 <li><code>method</code> &rarr; <code>retrieval</code> &rarr; <code>params</code><br />

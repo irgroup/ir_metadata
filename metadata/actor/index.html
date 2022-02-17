@@ -517,19 +517,22 @@
 <li><code>actor</code> &rarr; <code>fields</code><br />
 <strong>Description:</strong> List of the Actor's research fields.<br />
 <strong>Type:</strong> Sequence of scalars; <code>!!seq</code>.<br />
-<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters (<a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>); <code>!!str</code>.</li>
+<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters (<a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>); <code>!!str</code>.<br />
+<strong>Naming convention:</strong> <code>nlp</code>/<code>natural language processing</code>, <code>ir</code>/<code>information retrieval</code>, <code>databases</code>, <code>data analytics</code> <code>machine/deep learning</code>, <code>statistics</code>, <code>bibliometrics</code>, <code>information systems</code>         </li>
 <li><code>actor</code> &rarr; <code>mail</code><br />
 <strong>Description:</strong> Mail address of the Actor.  <br />
 <strong>Type:</strong> Scalar<br />
 <strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters (<a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>); <code>!!str</code>.</li>
 <li><code>actor</code> &rarr; <code>role</code><br />
-<strong>Description:</strong> Role of the Actor. Can be <code>experimenter</code> if the original experiment is conducted or <code>reproducer</code> if the experiment is reproduced.<br />
+<strong>Description:</strong> Role of the Actor. Can be <code>experimenter</code> if is an original experiment, or <code>reproducer</code> if it is a reproduced experiment.<br />
 <strong>Type:</strong> Scalar<br />
-<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters (<a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>); <code>!!str</code>.</li>
+<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters (<a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>); <code>!!str</code>.<br />
+<strong>Naming convention:</strong> <code>experimenter</code>, <code>reproducer</code></li>
 <li><code>actor</code> &rarr; <code>degree</code><br />
-<strong>Description:</strong> The academic degree of the Actor, e.g., <code>B.Sc.</code>, <code>M.Sc.</code>, or <code>Ph.D.</code><br />
+<strong>Description:</strong> The academic degree of the Actor. Should be reported by the conventional abbreviations (see examples for the naming convention below).<br />
 <strong>Type:</strong> Scalar<br />
-<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters (<a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>); <code>!!str</code>.</li>
+<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters (<a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>); <code>!!str</code>.<br />
+<strong>Naming convention:</strong> <code>B.Sc.</code>, <code>M.Sc.</code>, <code>Ph.D.</code>  </li>
 <li><code>actor</code> &rarr; <code>github</code><br />
 <strong>Description:</strong> URL with the <a href="https://www.github.com/">GitHub</a> handle of the Actor.<br />
 <strong>Type:</strong> Scalar<br />

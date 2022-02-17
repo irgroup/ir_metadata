@@ -503,9 +503,10 @@
 <h2 id="checklist">Checklist</h2>
 <ul>
 <li><code>research goal</code> &rarr; <code>venue</code> &rarr; <code>name</code><br />
-<strong>Description:</strong> Acronym (if available) or name of the venue (e.g., journal or conference) at which is the study is published.  <br />
+<strong>Description:</strong> Acronym (if available) or name of the venue (e.g., journal or conference) at which is the study is published. A non-exhaustive list is given by the naming conventions.  <br />
 <strong>Type:</strong> Scalar<br />
-<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters (<a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>); <code>!!str</code>.   </li>
+<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters (<a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>); <code>!!str</code>. <br />
+<strong>Naming convention:</strong> <code>CHIIR</code>, <code>CIKM</code>, <code>ECIR</code>, <code>ICTIR</code>, <code>IPM</code>, <code>IRJ</code>, <code>JASIST</code>, <code>JCDL</code>, <code>KDD</code>, <code>SIGIR</code>, <code>TOIS</code>, <code>WSDM</code>, <code>WWW</code>, <code>CLEF</code>, <code>NTCIR</code>, <code>TREC</code>  </li>
 <li><code>research goal</code> &rarr; <code>venue</code> &rarr; <code>year</code><br />
 <strong>Description:</strong> Year in which the study was published (syntax: <code>YYYY</code>).<br />
 <strong>Type:</strong> Scalar<br />
@@ -531,9 +532,10 @@
 <strong>Type:</strong> Scalar<br />
 <strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters (<a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>); <code>!!str</code>.  </li>
 <li><code>research goal</code> &rarr; <code>evaluation</code> &rarr; <code>reported_measures</code><br />
-<strong>Description:</strong> A list of measures that were evaluated. We propose to follow <code>trec_eval</code>'s naming convention of the measures. <br />
+<strong>Description:</strong> A list of measures that were evaluated. We propose to follow <code>trec_eval</code>'s naming convention of the measures (see naming convention). <br />
 <strong>Type:</strong>  Sequence of scalars; <code>!!seq</code>.<br />
-<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters (<a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>); <code>!!str</code>. </li>
+<strong>Encoding:</strong> <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters (<a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>); <code>!!str</code>.<br />
+<strong>Naming convention:</strong> <code>map</code>, <code>P_10</code>, <code>ndcg</code>, <code>bpref</code>  </li>
 <li><code>research goal</code> &rarr; <code>evaluation</code> &rarr; <code>baseline</code><br />
 <strong>Description:</strong> The run tag of the baseline that is used in the experiments. If the <a href="../actor">Actor</a> is the original <code>experimenter</code>, the baseline should be adequate and state-of-the-art. If the Actor is a <code>reproducer</code>, the baseline refers to the run that is reproduced.<br />
 <strong>Type:</strong> Sequence of scalars; <code>!!seq</code>.<br />
@@ -544,11 +546,13 @@
 <li><code>research goal</code> &rarr; <code>evaluation</code> &rarr; <code>significance test</code> &rarr; <code>name</code><br />
 <strong>Description:</strong> Name of the significance test.   <br />
 <strong>Type:</strong> Scalar  <br />
-<strong>Encoding:</strong>  <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters (<a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>); <code>!!str</code>.</li>
+<strong>Encoding:</strong>  <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters (<a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>); <code>!!str</code>.<br />
+<strong>Naming convention:</strong> <code>t-test</code> (Student's t-test), <code>wilcoxon</code> (Wilcoxon signed rank test), <code>sign</code> (sign test), <code>permutation</code> (permutation test), <code>bootstrap</code> (bootstrap test – shift method)  </li>
 <li><code>research goal</code> &rarr; <code>evaluation</code> &rarr; <code>significance test</code> &rarr; <code>correction method</code><br />
 <strong>Description:</strong> Name of the correction method.<br />
 <strong>Type:</strong> Scalar<br />
-<strong>Encoding:</strong>  <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters (<a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>); <code>!!str</code>.</li>
+<strong>Encoding:</strong>  <a href="https://www.unicode.org/main.html">UTF-8</a> encoded string of characters (<a href="https://www.ietf.org/rfc/rfc3629.txt">RFC3629</a>); <code>!!str</code>.<br />
+<strong>Naming convention:</strong> <code>bonferroni</code> (Bonferroni correction), <code>holm-bonferroni</code> (Holm–Bonferroni method), <code>HMP</code> (harmonic mean p-value), <code>MRT</code> (Duncan's new multiple range test)  </li>
 </ul>
 <h2 id="example">Example</h2>
 <pre><code class="language-YAML">research goal:
