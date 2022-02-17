@@ -7,15 +7,15 @@ The **Implementation** is closely related to the  [Method](../method). What is m
 - `implementation` &rarr; `executable` &rarr; `cmd`  
 **Description:** The software command that was used to conduct the experiments, more specifically, to make the run.  
 **Type:** Scalar  
-**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters according to [RFC3629](https://www.ietf.org/rfc/rfc3629.txt)  
+**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters ([RFC3629](https://www.ietf.org/rfc/rfc3629.txt)); `!!str`.  
 - `implementation` &rarr; `source` &rarr; `lang`  
 **Description:** All programming languages that were used for the experiments.  
-**Type:** Sequence of scalars  
-**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters according to [RFC3629](https://www.ietf.org/rfc/rfc3629.txt)
+**Type:** Sequence of scalars; `!!seq`.  
+**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters ([RFC3629](https://www.ietf.org/rfc/rfc3629.txt)); `!!str`.
 - `implementation` &rarr; `source` &rarr; `repository`  
 **Description:** The URL of the corresponding software repository.  
 **Type:** Scalar  
-**Encoding:** URI according to [RFC2396](https://www.ietf.org/rfc/rfc2396.txt)  
+**Encoding:** URI according to [RFC2396](https://www.ietf.org/rfc/rfc2396.txt); `!!str`.  
 - `implementation` &rarr; `source` &rarr; `commit`  
 **Description:** The commit at which the repository was used for the experiments. Both long and short versions are valid.    
 **Type:** Scalar  

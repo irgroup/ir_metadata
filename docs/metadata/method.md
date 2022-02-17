@@ -7,50 +7,50 @@ The **Method** describes the mapping of query-document pairs to a ranking score.
 - `method` &rarr; `automatic`  
 **Description:** Boolean value indicating if it is a automatic (`true`) or manual (`false`) run.   
 **Type:** Scalar  
-**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of according to [RFC3629](https://www.ietf.org/rfc/rfc3629.txt); either `true` or `false`        
+**Encoding:** Boolean; `!!bool`.        
 - `method` &rarr; `score ties`  
 **Description:** Name of the method used to break score ties in the ranking.  
 **Type:** Scalar  
-**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters according to [RFC3629](https://www.ietf.org/rfc/rfc3629.txt)    
+**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters ([RFC3629](https://www.ietf.org/rfc/rfc3629.txt)); `!!str`.    
 - `method` &rarr; `indexing` &rarr; `tokenizer`  
 **Description:** Name of the tokenizer. If available, it can be reported by the class in the software package (see example below).  
 **Type:** Scalar  
-**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters according to [RFC3629](https://www.ietf.org/rfc/rfc3629.txt)    
+**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters ([RFC3629](https://www.ietf.org/rfc/rfc3629.txt)); `!!str`.    
 - `method` &rarr; `indexing` &rarr; `stemmer`  
 **Description:** Name of the stemmer. If available, it can be reported by the class in the software package (see example below).  
 **Type:** Scalar  
-**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters according to [RFC3629](https://www.ietf.org/rfc/rfc3629.txt)    
+**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters ([RFC3629](https://www.ietf.org/rfc/rfc3629.txt)); `!!str`.    
 - `method` &rarr; `indexing` &rarr; `stopwords`  
 **Description:** Name of the stopword list. If available, it can be reported by the class in the software package (see example below).  
 **Type:** Scalar  
-**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters according to [RFC3629](https://www.ietf.org/rfc/rfc3629.txt)    
+**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters ([RFC3629](https://www.ietf.org/rfc/rfc3629.txt)); `!!str`.    
 - `method` &rarr; `retrieval`  
 **Description:** The retrieval approach is documented by a sequence of mappings, where each mapping represents one component of a ranking pipeline, i.e., it is also possible to report multi-stage ranking pipelines by referring to previous ranking stages.  
-**Type:** Sequence of mappings  
+**Type:** Sequence of mappings; `!!seq [!!map, !!map, ...]`.  
 - `method` &rarr; `retrieval` &rarr; `name`  
 **Description:** Name of the ranking stage component.  
 **Type:** Scalar  
-**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters according to [RFC3629](https://www.ietf.org/rfc/rfc3629.txt)    
+**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters ([RFC3629](https://www.ietf.org/rfc/rfc3629.txt)); `!!str`.    
 - `method` &rarr; `retrieval` &rarr; `method`  
 **Description:** Name of the actual retrieval method.  
 **Type:** Scalar  
-**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters according to [RFC3629](https://www.ietf.org/rfc/rfc3629.txt)    
+**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters ([RFC3629](https://www.ietf.org/rfc/rfc3629.txt)); `!!str`.    
 - `method` &rarr; `retrieval` &rarr; `params`  
 **Description:** Parameter(s) of the retrieval method. Depending on the parameter, a single mapping is defined by the parameter name and a decimal integer or floating number.    
 **Type:** Scalar    
-**Encoding:** A decimal integer or floating number.  
+**Encoding:** A decimal integer or floating point number; `!!int` or `!!float`.  
 - `method` &rarr; `retrieval` &rarr; `reranks`  
 **Description:** Name of the component whose output will be reranked.  
 **Type:** Scalar  
-**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters according to [RFC3629](https://www.ietf.org/rfc/rfc3629.txt)    
+**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters ([RFC3629](https://www.ietf.org/rfc/rfc3629.txt)); `!!str`.    
 - `method` &rarr; `retrieval` &rarr; `interpolates`  
 **Description:** Name of the component whose output will be reranked.   
-**Type:** Sequence of scalars    
-**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters according to [RFC3629](https://www.ietf.org/rfc/rfc3629.txt)    
+**Type:** Sequence of scalars; `!!seq`.    
+**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters ([RFC3629](https://www.ietf.org/rfc/rfc3629.txt)); `!!str`.    
 - `method` &rarr; `retrieval` &rarr; `weight`  
 **Description:** Interpolation weight.   
 **Type:** Scalar  
-**Encoding:**  A decimal integer or floating number.  
+**Encoding:** A decimal integer or floating point number; `!!int` or `!!float`.  
 
 ## Example
 

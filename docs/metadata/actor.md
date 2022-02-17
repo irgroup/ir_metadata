@@ -7,39 +7,39 @@ The **Actor** component represents the experimenter who conducts the experiments
 - `actor` &rarr; `name`  
 **Description:** Name of the Actor.  
 **Type:** Scalar  
-**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters according to [RFC3629](https://www.ietf.org/rfc/rfc3629.txt)
+**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters ([RFC3629](https://www.ietf.org/rfc/rfc3629.txt)); `!!str`.
 - `actor` &rarr; `orcid`  
 **Description:** [ORCID](https://orcid.org/) of the Actor.    
 **Type:** Scalar  
-**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters according to [RFC3629](https://www.ietf.org/rfc/rfc3629.txt)
+**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters ([RFC3629](https://www.ietf.org/rfc/rfc3629.txt)); `!!str`.
 - `actor` &rarr; `team`  
 **Description:** Team name of which the Actor is part of.  
 **Type:** Scalar  
-**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters according to [RFC3629](https://www.ietf.org/rfc/rfc3629.txt)
+**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters ([RFC3629](https://www.ietf.org/rfc/rfc3629.txt)); `!!str`.
 - `actor` &rarr; `fields`  
 **Description:** List of the Actor's research fields.  
-**Type:** Sequence of scalars  
-**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters according to [RFC3629](https://www.ietf.org/rfc/rfc3629.txt)
+**Type:** Sequence of scalars; `!!seq`.  
+**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters ([RFC3629](https://www.ietf.org/rfc/rfc3629.txt)); `!!str`.
 - `actor` &rarr; `mail`  
 **Description:** Mail address of the Actor.    
 **Type:** Scalar  
-**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters according to [RFC3629](https://www.ietf.org/rfc/rfc3629.txt)
+**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters ([RFC3629](https://www.ietf.org/rfc/rfc3629.txt)); `!!str`.
 - `actor` &rarr; `role`  
 **Description:** Role of the Actor. Can be `experimenter` if the original experiment is conducted or `reproducer` if the experiment is reproduced.  
 **Type:** Scalar  
-**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters according to [RFC3629](https://www.ietf.org/rfc/rfc3629.txt)
+**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters ([RFC3629](https://www.ietf.org/rfc/rfc3629.txt)); `!!str`.
 - `actor` &rarr; `degree`  
 **Description:** The academic degree of the Actor, e.g., `B.Sc.`, `M.Sc.`, or `Ph.D.`  
 **Type:** Scalar  
-**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters according to [RFC3629](https://www.ietf.org/rfc/rfc3629.txt)
+**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters ([RFC3629](https://www.ietf.org/rfc/rfc3629.txt)); `!!str`.
 - `actor` &rarr; `github`  
 **Description:** URL with the [GitHub](https://www.github.com/) handle of the Actor.  
 **Type:** Scalar  
-**Encoding:** URI according to [RFC2396](https://www.ietf.org/rfc/rfc2396.txt)    
+**Encoding:** URI according to [RFC2396](https://www.ietf.org/rfc/rfc2396.txt); `!!str`.    
 - `actor` &rarr; `twitter`  
 **Description:** URL with the [Twitter](https://www.twitter.com/) handle of the Actor.    
 **Type:** Scalar  
-**Encoding:** URI according to [RFC2396](https://www.ietf.org/rfc/rfc2396.txt)    
+**Encoding:** URI according to [RFC2396](https://www.ietf.org/rfc/rfc2396.txt); `!!str`.   
 
 ## Example
 

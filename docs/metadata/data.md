@@ -10,48 +10,48 @@ The **Data** component comprises the input data of the experiment. The metadata 
 - `data` &rarr; `test collection` &rarr; `name`   
 **Description:** Name of the test collection.   
 **Type:**  Scalar   
-**Encoding:**  [UTF-8](https://www.unicode.org/main.html) encoded string of characters according to [RFC3629](https://www.ietf.org/rfc/rfc3629.txt)
+**Encoding:**  [UTF-8](https://www.unicode.org/main.html) encoded string of characters ([RFC3629](https://www.ietf.org/rfc/rfc3629.txt)); `!!str`.
 - `data` &rarr; `test collection` &rarr; `source`  
 **Description:** Official source of the collection.  
 **Type:** Scalar  
-**Encoding:**  URI according to [RFC2396](https://www.ietf.org/rfc/rfc2396.txt)      
+**Encoding:**  URI according to [RFC2396](https://www.ietf.org/rfc/rfc2396.txt); `!!str`.      
 - `data` &rarr; `test collection` &rarr; `qrels`   
 **Description:** Source of the qrels.    
 **Type:** Scalar  
-**Encoding:**  URI according to [RFC2396](https://www.ietf.org/rfc/rfc2396.txt)   
+**Encoding:**  URI according to [RFC2396](https://www.ietf.org/rfc/rfc2396.txt); `!!str`.   
 - `data` &rarr; `test collection` &rarr; `topics`  
 **Description:** Source of the topic file.   
 **Type:** Scalar  
-**Encoding:**  URI according to [RFC2396](https://www.ietf.org/rfc/rfc2396.txt)   
+**Encoding:**  URI according to [RFC2396](https://www.ietf.org/rfc/rfc2396.txt); `!!str`.   
 - `data` &rarr; `test collection` &rarr; `ir_datasets`  
 **Description:** Identifier in [`ir_datasets`](https://ir-datasets.com/).  
 **Type:** Scalar  
-**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters according to [RFC3629](https://www.ietf.org/rfc/rfc3629.txt)  
+**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters ([RFC3629](https://www.ietf.org/rfc/rfc3629.txt)); `!!str`.  
 
 - `data` &rarr; `training data`  
 **Description:** List of different training data sources that are used in the experiments represented as *mappings*, a single mapping usually has a `name` and a `source`.  
-**Type:** Sequence of mappings   
+**Type:** Sequence of mappings; `!!seq [!!map, !!map, ...]`.   
 - `data` &rarr; `training data` &rarr; `name`  
 **Description:**  Name of the training data resource.  
 **Type:** Scalar  
-**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters according to [RFC3629](https://www.ietf.org/rfc/rfc3629.txt)
+**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters ([RFC3629](https://www.ietf.org/rfc/rfc3629.txt)); `!!str`.
 - `data` &rarr; `training data` &rarr; `source`  
 **Description:**  Source location of the training data resource.   
 **Type:** Scalar  
-**Encoding:** URI according to [RFC2396](https://www.ietf.org/rfc/rfc2396.txt)      
+**Encoding:** URI according to [RFC2396](https://www.ietf.org/rfc/rfc2396.txt); `!!str`.      
 
 
 - `data` &rarr; `other`  
 **Description:** List of other data sources that are used in the experiments, for instance, external stopword lists, thesauri, or word embeddings. These resources are represented as *mappings*, a single mapping usually has a `name` and a `source`.    
-**Type:** Sequence of mappings  
+**Type:** Sequence of mappings; `!!seq [!!map, !!map, ...]`.  
 - `data` &rarr; `other` &rarr; `name`  
 **Description:**  Name of the data resource.  
 **Type:** Scalar  
-**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters according to [RFC3629](https://www.ietf.org/rfc/rfc3629.txt)
+**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters ([RFC3629](https://www.ietf.org/rfc/rfc3629.txt)); `!!str`.
 - `data` &rarr; `other` &rarr; `source`  
 **Description:** Source location of the data resource.  
 **Type:** Scalar  
-**Encoding:** URI according to [RFC2396](https://www.ietf.org/rfc/rfc2396.txt)    
+**Encoding:** URI according to [RFC2396](https://www.ietf.org/rfc/rfc2396.txt); `!!str`.    
 
 
 ## Example
