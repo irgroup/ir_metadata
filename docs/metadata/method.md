@@ -36,9 +36,9 @@ The **Method** describes the mapping of query-document pairs to a ranking score.
 **Type:** Scalar  
 **Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters according to [RFC3629](https://www.ietf.org/rfc/rfc3629.txt)    
 - `method` &rarr; `retrieval` &rarr; `params`  
-**Description:** Parameters of the retrieval method.  
-**Type:** Sequence of scalars    
-**Encoding:** Depending on the parameter, a single mapping is defined by the parameter name and a decimal integer or floating number.    
+**Description:** Parameter(s) of the retrieval method. Depending on the parameter, a single mapping is defined by the parameter name and a decimal integer or floating number.    
+**Type:** Scalar    
+**Encoding:** A decimal integer or floating number.  
 - `method` &rarr; `retrieval` &rarr; `reranks`  
 **Description:** Name of the component whose output will be reranked.  
 **Type:** Scalar  

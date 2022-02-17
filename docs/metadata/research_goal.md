@@ -5,11 +5,11 @@ The **Research goal** describes the purpose of the study. The metadata informati
 ## Checklist
 
 - `research goal` &rarr; `venue` &rarr; `name`  
-**Description:** Acronym (if available) or name of the venue (e.g. journal or conference) at which is the study is published.    
+**Description:** Acronym (if available) or name of the venue (e.g., journal or conference) at which is the study is published.    
 **Type:** Scalar  
-**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of according to [RFC3629](https://www.ietf.org/rfc/rfc3629.txt)   
+**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters according to [RFC3629](https://www.ietf.org/rfc/rfc3629.txt)   
 - `research goal` &rarr; `venue` &rarr; `year`  
-**Description:** Year in which the study was published.  
+**Description:** Year in which the study was published (syntax: `YYYY`).  
 **Type:** Scalar  
 **Encoding:** A decimal integer number  
 - `research goal` &rarr; `publication` &rarr; `dblp`  
@@ -31,19 +31,26 @@ The **Research goal** describes the purpose of the study. The metadata informati
 - `research goal` &rarr; `publication` &rarr; `abstract`  
 **Description:** Abstract of the publication.    
 **Type:** Scalar  
-**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of according to [RFC3629](https://www.ietf.org/rfc/rfc3629.txt)  
+**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters according to [RFC3629](https://www.ietf.org/rfc/rfc3629.txt)  
 - `research goal` &rarr; `evaluation` &rarr; `reported_measures`  
 **Description:** A list of measures that were evaluated. We propose to follow `trec_eval`'s naming convention of the measures.   
 **Type:**  Sequence of scalars  
-**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of according to [RFC3629](https://www.ietf.org/rfc/rfc3629.txt) 
+**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters according to [RFC3629](https://www.ietf.org/rfc/rfc3629.txt) 
 - `research goal` &rarr; `evaluation` &rarr; `baseline`  
-**Description:** The run tag of the baseline that is used in the experiments. If the [Actor](../actor) is the original `experimenter`, the baseline should be adequate and state-of-the-art. If the Actor is a `reproducer` the baseline refers to the run that is reproduced.  
+**Description:** The run tag of the baseline that is used in the experiments. If the [Actor](../actor) is the original `experimenter`, the baseline should be adequate and state-of-the-art. If the Actor is a `reproducer`, the baseline refers to the run that is reproduced.  
 **Type:** Sequence of scalars  
-**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of according to [RFC3629](https://www.ietf.org/rfc/rfc3629.txt) 
+**Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters according to [RFC3629](https://www.ietf.org/rfc/rfc3629.txt) 
 - `research goal` &rarr; `evaluation` &rarr; `significance test`  
-**Description:** Significance tests that were used as part of the experimental evaluations. If required the corresponding correction method should be reported as well.    
+**Description:** Significance tests that were used as part of the experimental evaluations. If required, the corresponding correction method should be reported as well.    
 **Type:** Sequence of mappings  
-**Encoding:**  [UTF-8](https://www.unicode.org/main.html) encoded string of according to [RFC3629](https://www.ietf.org/rfc/rfc3629.txt)
+- `research goal` &rarr; `evaluation` &rarr; `significance test` &rarr; `name`  
+**Description:** Name of the significance test.     
+**Type:** Scalar    
+**Encoding:**  [UTF-8](https://www.unicode.org/main.html) encoded string of characters according to [RFC3629](https://www.ietf.org/rfc/rfc3629.txt)
+- `research goal` &rarr; `evaluation` &rarr; `significance test` &rarr; `correction method`  
+**Description:** Name of the correction method.  
+**Type:** Scalar  
+**Encoding:**  [UTF-8](https://www.unicode.org/main.html) encoded string of characters according to [RFC3629](https://www.ietf.org/rfc/rfc3629.txt)
 
 ## Example
 

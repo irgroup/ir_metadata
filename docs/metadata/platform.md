@@ -45,11 +45,11 @@ The **Platform** comprises the hard- and software underlying the actual [Impleme
 **Type:** Scalar  
 **Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters according to [RFC3629](https://www.ietf.org/rfc/rfc3629.txt)  
 - `platform` &rarr; `software` &rarr; `libraries`  
-**Description:** Names and versions of the software libraries and packages underlying the experiment's [Implementation](../implementation) with the following syntax `<software-libray>==<version>`. If possible, libraries and packages of different programming languages should be in separate nodes (see example below).   
+**Description:** Names and versions of the software libraries and packages underlying the experiment's [Implementation](../implementation) with the following syntax `<libray-name>==<version>`. If possible, libraries and packages of different programming languages should be in separate nodes (see example below).   
 **Type:** Sequence of scalars  
 **Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters according to [RFC3629](https://www.ietf.org/rfc/rfc3629.txt)  
 - `platform` &rarr; `software` &rarr; `retrieval toolkit`  
-**Description:** Names and versions of the retrieval toolkits underlying the experiment's [Implementation](../implementation) with the following syntax `<software-libray>==<version>`.  
+**Description:** Names and versions of the retrieval toolkits underlying the experiment's [Implementation](../implementation) with the following syntax `<toolkit-name>==<version>`.  
 **Type:** Sequence of scalars  
 **Encoding:** [UTF-8](https://www.unicode.org/main.html) encoded string of characters according to [RFC3629](https://www.ietf.org/rfc/rfc3629.txt)  
 
