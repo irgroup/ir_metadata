@@ -1,7 +1,7 @@
 # `ir_metadata` <br> An Extensible Metadata Schema <br> for Information Retrieval Experiments
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]()
-[![DOI](https://zenodo.org/badge/DOI/10.1234/zenodo.1234567.svg)]()
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/irgroup/ir_metadata/blob/master/resources/demo.ipynb)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5997491.svg)](https://doi.org/10.5281/zenodo.5997491)
 
 Experimentation in information retrieval (IR) research is an inherently data-driven process that often results in experimental artifacts - so-called run files. In order to promote the reproducibility of IR experiments, Voorhees et al. introduced the idea of [Open Runs](http://research.nii.ac.jp/ntcir/workshop/OnlineProceedings12/pdf/evia/04-EVIA2016-VoorheesE.pdf) proposing to provide every run file with an open-source software repository. We build upon the idea of Open runs and propose to make the experimental artifacts even more valuable and reproducible by metadata annotations of run files.  We align the metadata schema to the [PRIMAD model](https://sigir.org/files/forum/2016J/p068.pdf), providing a conceptual taxonomy for reproducible IR experiments.
 
@@ -9,4 +9,4 @@ From a practical point of view, we propose to add the metadata, similar to a fil
 
 This website hosts an introduction of the outlined metadata schema of Open Runs for which more details and background information can be found in our resource paper. For each PRIMAD component this website provides [checklists](metadata/overview) that can be used as a reference when annotating run files in order to prepare them for reproducibility.
 
-Besides this website, we introduce the metadata and the software support of [`repro_eval`](https://github.com/irgroup/repro_eval) in a [Colab notebook]() that uses some annotated runs that are taken from our curated dataset with annotated runs hosted in a [Zenodo]() archive.
+Besides this website, we introduce the metadata and the software support of [`repro_eval`](https://github.com/irgroup/repro_eval) in a [Colab notebook](https://colab.research.google.com/github/irgroup/ir_metadata/blob/master/resources/demo.ipynb) that uses some annotated runs that are taken from our curated dataset with annotated runs hosted in a [Zenodo](https://doi.org/10.5281/zenodo.5997491) archive.

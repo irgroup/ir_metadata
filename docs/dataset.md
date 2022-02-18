@@ -1,8 +1,8 @@
 # Annotated dataset
 
-[![DOI](https://zenodo.org/badge/DOI/10.1234/zenodo.1234567.svg)]()
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5997491.svg)](https://doi.org/10.5281/zenodo.5997491)
 
-We have curated a dataset of annotated run files resulting from different experiments that share the same retrieval method on a more abstract level. All of these runs are based on *cross-collection relevance feedback* for which relevance labels and the corresponding documents from one or more *source collections* are used as training data to train a relevance classifier that ranks documents of a *target collection*. While some of the runs were available from the TREC run archive, others were reimplemented by us. All of the runs are annotated in accordance with the outlined metadata schema. The dataset is hosted in an external [Zenodo archive](). Some of the runs are used for the demonstration on Colab.
+We have curated a dataset of annotated run files resulting from different experiments that share the same retrieval method on a more abstract level. All of these runs are based on *cross-collection relevance feedback* for which relevance labels and the corresponding documents from one or more *source collections* are used as training data to train a relevance classifier that ranks documents of a *target collection*. While some of the runs were available from the TREC run archive, others were reimplemented by us. All of the runs are annotated in accordance with the outlined metadata schema. The dataset is hosted in an external [Zenodo archive](https://doi.org/10.5281/zenodo.5997491). Some of the runs are used for the demonstration on Colab.
 
 The run dataset is compiled from the following reproduced experiments:
 
