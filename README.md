@@ -29,3 +29,9 @@ Having committed your changes to this repository, update the rendered website wi
 ```
 mkdocs gh-deploy
 ```
+
+## License
+
+The source code of the website is available under [MIT License](https://opensource.org/licenses/mit-license.php).
+
+Please note that the dataset in the Zenodo archive is licensed separately.
