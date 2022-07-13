@@ -31,5 +31,10 @@ nav:
 repo_url: https://github.com/irgroup/ir_metadata/
 repo_name: ir_metadata
 edit_uri: https://github.com/irgroup/ir_metadata/tree/master/docs
+markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
 
 
