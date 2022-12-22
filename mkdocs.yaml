@@ -12,8 +12,9 @@ theme:
     palette:
         primary: teal
         accent: deep orange
-    font:
-        text: Roboto
+    font: false
+extra_css:
+    - stylesheets/extra.css
 nav:
     - Metadata for IR Experiments: index.md
     - 'Metadata schema': 
